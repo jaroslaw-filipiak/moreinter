@@ -1,6 +1,6 @@
 .about {
     @apply flex flex-col-reverse lg:flex-row items-center pl-7 pr-7 mx-auto ; 
-    @include container1234;
+    @include innerContainer;
 
     &-content {
         @apply w-full lg:w-5/12 2xl:pr-36 pb-20 lg:pb-0;

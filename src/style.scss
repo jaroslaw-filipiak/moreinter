@@ -6,9 +6,9 @@
     transition: all .3s ease-in-out;
   }
 
-@mixin container1234 {
+@mixin innerContainer {
     max-width: 1380px;
-    border: 1px dashed blue;
+    // border: 1px dashed blue;
 }
 
 @import './debug';
@@ -47,7 +47,7 @@
    }
    
     &--inner {
-        @include container1234;
+        @include innerContainer;
         height: 130px;
         @apply w-full mx-auto flex items-center justify-between;
         @include globalTransition;

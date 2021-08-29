@@ -1,12 +1,19 @@
 .offer {
-    @apply bg-gray-f8;
+    @apply bg-gray-f8 mx-auto pl-7 pr-7;
+
+    &--inner {
+        @include innerContainer ;
+        @apply mx-auto pt-14 ; 
+    }
+   
 
     &--items {
-        @apply flex items-center justify-between flex-wrap w-6/12 border mx-auto;
+        @apply flex items-center justify-center flex-wrap mx-auto w-full lg:w-4/5 mt-14 pb-20;
+       
     }
 
     &--item {
-        @apply w-60 flex flex-col items-center justify-center border;
+        @apply w-60 flex flex-col items-center justify-center xl:ml-9 xl:mr-9;
 
         p {
             @apply uppercase font-medium text-xl text-black text-center;
