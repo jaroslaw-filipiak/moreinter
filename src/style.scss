@@ -3,7 +3,15 @@
 @tailwind utilities;
 
 @import './typo';
-@import './video';
+@import './hero';
+@import './about';
+@import './offer';
+@import './how-we-work';
+@import './our-team';
+@import './trust-us';
+@import './contact';
+@import './footer';
+
 
 .border {
     @apply border-dotted border-gray-7070;
@@ -16,7 +24,7 @@
 
 
 .top-bar {
-    @apply  border mx-auto fixed w-full top-0 left-0 bg-white;
+    @apply  border mx-auto fixed w-full top-0 left-0 bg-white z-10;
    @include globalTransition;
 
    .logo img{

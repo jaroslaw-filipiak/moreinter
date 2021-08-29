@@ -1,0 +1,11 @@
+.about {
+    @apply flex items-center; 
+
+    &-content {
+        @apply border w-5/12 pr-36;
+    }
+
+    &-paralax-img {
+        @apply border w-7/12;
+    }
+}

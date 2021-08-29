@@ -1,0 +1,28 @@
+.our-team {
+
+    @apply flex items-stretch min-h-screen;
+
+    &--inner {
+        @apply border w-11/12 relative flex items-end justify-center min-h-full;
+    }
+
+    &--content {
+        @apply border w-6/12 pl-72 ;
+
+        p {
+            @apply mt-16;
+        }
+    }
+
+    img {
+        @apply absolute
+    }
+
+    .img-left {
+        @apply left-0 top-0;
+    }
+
+    .img-right {
+        @apply right-0 top-0;
+    }
+}

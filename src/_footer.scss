@@ -1,0 +1,15 @@
+.footer {
+    @apply border bg-black;
+    
+    &--inner {
+        @apply flex items-center justify-between;
+    }
+
+    &--left, &--right {
+        @apply w-6/12;
+    }
+}
+
+.copy {
+    @apply bg-gray-7070 text-white flex items-center justify-around;;
+}

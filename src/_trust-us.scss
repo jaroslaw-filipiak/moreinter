@@ -1,0 +1,14 @@
+.trust-us {
+    @apply border bg-gray-f8 pl-16 pr-16; 
+
+    &--logos {
+        @apply  border flex items-center justify-between;
+    }
+
+    &--logo {
+       @apply w-60;
+       img {
+         filter: grayscale(100%);
+       }
+    }
+}

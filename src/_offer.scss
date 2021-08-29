@@ -1,0 +1,15 @@
+.offer {
+    @apply bg-gray-f8;
+
+    &--items {
+        @apply flex items-center justify-between flex-wrap w-6/12 border mx-auto;
+    }
+
+    &--item {
+        @apply w-60 flex flex-col items-center justify-center border;
+
+        p {
+            @apply uppercase font-medium text-xl text-black text-center;
+        }
+    }
+}

@@ -1,0 +1,19 @@
+.how-we-work {
+    @apply border; 
+
+    &--items {
+        @apply flex items-center justify-between mx-auto w-9/12 border;
+    }
+
+    &--item {
+        @apply border flex flex-col items-center justify-center w-96 pl-4 pr-4;
+
+        img {
+
+        }
+
+        p {
+            @apply uppercase font-medium text-xl text-black text-center pl-7 pr-7;
+        }
+    }
+}

@@ -1,0 +1,79 @@
+.contact {
+    form {
+        @apply border w-7/12;
+
+        input#name {
+            @apply w-8/12;
+        }
+
+        .form-row-2 {
+
+            div {
+                @apply w-full border;
+            }
+            input {
+                @apply w-11/12;
+            }
+        }
+
+        input , textarea {
+            @apply  bg-gray-f8 text-base text-gray-7070 text-left pl-7 pr-7 pt-4 pb-4 border border-gray-7070;
+        }
+
+        textarea {
+            @apply w-full;
+        }
+    }
+
+    .btn-submit {
+        @apply text-3xl text-gray-7070 font-book uppercase font-semibold border-2 border-gray-7070 pl-16 pr-16 pt-4 pb-4;
+    }
+
+}
+.checkbox-acceptance{
+		/*border: 2px solid red;*/
+		border-radius: 5px;
+        overflow: hidden;
+        font-size: .8125em;
+        line-height: 1.307em;
+        border: 2px solid #fffddf;
+		/* temp width */
+        max-width: 800px;
+	}
+	.left-wrap{
+		width: 50px; 
+		float: left;
+
+    }
+    .left-wrap input[type=checkbox]{
+    	margin: 20px 17px;
+    }
+
+    .left-wrap input{
+    	margin: 20px 17px;
+    }
+
+	.right-wrap{
+		float: right;
+		width: 740px;
+	}
+
+	.checkbox-acceptance label{
+		padding: 20px;
+		display: inline-block;
+	}
+
+	/* error styles */
+	.checkbox-acceptance.error{
+		border-color: red;
+	}
+	
+	input.error{
+		outline: 2px solid red;
+	}
+
+    #map {
+        width: 50%;
+        height: 300px;
+        margin: 0 auto;
+      }

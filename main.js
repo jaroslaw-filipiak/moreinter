@@ -12,57 +12,36 @@ window.addEventListener("scroll", function() {
     });
 
 
+    import Swiper, { Navigation, Pagination } from 'swiper';
+    // import Swiper and modules styles
+    import 'swiper/css';
+    import 'swiper/css/navigation';
+    import 'swiper/css/pagination';
+    Swiper.use([Navigation, Pagination]);
+    const swiper = new Swiper();
 
-// Get element
-var youtubeEmbedElement = document.getElementById("youtubeEmbed");
 
-// Add YouTube API script
-var tag = document.createElement("script");
-tag.src = "https://www.youtube.com/iframe_api";
-var firstScriptTag = document.getElementsByTagName("script")[0];
-firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-
-var player;
-var videoId = youtubeEmbedElement.dataset.videoId;
-var startSeconds = 184;
-var endSeconds = 210;
-
-window.onYouTubeIframeAPIReady = function () {
-  player = new YT.Player("youtubeEmbed", {
-    videoId: videoId, // YouTube Video ID
-    playerVars: {
-      autoplay: 1, // Auto-play the video on load
-      autohide: 1, // Hide video controls when playing
-      disablekb: 1,
-      controls: 0, // Hide pause/play buttons in player
-      showinfo: 0, // Hide the video title
-      modestbranding: 1, // Hide the Youtube Logo
-      loop: 1, // Run the video in a loop
-      fs: 0, // Hide the full screen button
-      rel: 0,
-      enablejsapi: 1,
-      start: startSeconds,
-      end: endSeconds
-    },
-    events: {
-      onReady: function (e) {
-        e.target.mute();
-        e.target.playVideo();
-      },
-      onStateChange: function (e) {
-        if (e.data === YT.PlayerState.PLAYING) {
-          document.getElementById("youtubeEmbed").classList.add("loaded");
-        }
-
-        if (e.data === YT.PlayerState.ENDED) {
-          // Loop from starting point
-          player.seekTo(startSeconds);
-        }
-      }
+    const map = () => {
+        var createMap = {
+            center: new google.maps.LatLng(-23.30773, -51.17512),
+            zoom: 16,
+            panControl: false,
+            zoomControl: false,
+            mapTypeControl: false,
+            scaleControl: false,
+            scrollwheel: false,
+            streetViewControl: true,
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+        },
+        mapContainer = new google.maps.Map(document.getElementById("map"), createMap),
+        customIcon = "https://cdn0.iconfinder.com/data/icons/20-flat-icons/128/location-pointer.png",
+        customPosition = new google.maps.LatLng(-23.30773, -51.17512),
+        drawOutput = new google.maps.Marker({
+            position: customPosition,
+            map: mapContainer,
+            icon: customIcon
+        });
     }
-  });
-};
 
-
-
-    
+   
+    map();
