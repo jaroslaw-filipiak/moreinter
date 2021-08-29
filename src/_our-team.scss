@@ -1,6 +1,6 @@
 .our-team {
 
-    @apply flex items-stretch pb-20 md:pb-28 2xl:pb-52 border pl-7 pr-7;
+    @apply flex items-stretch pb-20 md:pb-28 2xl:pb-52 pl-7 pr-7;
 
     &--inner {
         @apply w-full xl:w-11/12 relative flex flex-col xl:flex-row items-end justify-center xl:pt-48 2xl:pt-96;
