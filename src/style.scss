@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import './typo';
+
+
+.top-bar {
+    @apply pt-7 pb-7;
+    
+    ul.main-nav {
+        @apply flex border font-book;
+        li {
+            @apply mr-12;
+            
+            a {
+                @apply text-main-blue uppercase text-tiny;
+            }
+        }
+    }
+}
