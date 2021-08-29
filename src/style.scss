@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+@import '/node_modules/slicknav/dist/slicknav.min.css';
+
 @import './typo';
 @import './hero';
 @import './about';
@@ -21,11 +23,14 @@
     transition: all .3s ease-in-out;
   }
 
-
+.slicknav_menu {
+    z-index: 9999;
+    @apply fixed left-0 top-0 w-full;
+}
 
 .top-bar {
-    @apply  border mx-auto fixed w-full top-0 left-0 bg-white z-10;
-   @include globalTransition;
+    @apply  border mx-auto fixed w-full top-0 left-0 bg-white z-10 pl-7 pr-7;
+    @include globalTransition;
 
    .logo img{
     width: 160px;
@@ -63,3 +68,22 @@
        }
     
 }
+
+.slicknav_menu {
+    @apply block md:hidden bg-white;
+}
+
+.slicknav_btn {
+    @apply bg-main-blue;
+}
+
+.slicknav_nav {
+    a {
+        @apply text-gray-7070;
+    }
+}
+
+.top-bar {
+    @apply hidden md:flex;
+}
+
