@@ -1,13 +1,13 @@
 .our-team {
 
-    @apply flex items-stretch min-h-screen;
+    @apply flex items-stretch pb-20 md:pb-28 2xl:pb-52 border pl-7 pr-7;
 
     &--inner {
-        @apply border w-11/12 relative flex items-end justify-center min-h-full;
+        @apply w-full xl:w-11/12 relative flex flex-col xl:flex-row items-end justify-center xl:pt-48 2xl:pt-96;
     }
 
     &--content {
-        @apply border w-6/12 pl-72 ;
+        @apply xl:w-8/12 2xl:w-6/12  lg:pt-96 xl:pt-0 xl:pl-72 2xl:pl-80 ;
 
         p {
             @apply mt-16;
@@ -15,14 +15,16 @@
     }
 
     img {
-        @apply absolute
+        @apply lg:absolute;
     }
 
     .img-left {
-        @apply left-0 top-0;
+        @apply lg:transform lg:scale-75 2xl:scale-100 left-0 top-0;
+        transform-origin: left top;
     }
 
     .img-right {
-        @apply right-0 top-0;
+        @apply hidden lg:block lg:transform lg:scale-75 2xl:scale-100 right-0 3xl:right-72 top-0;
+        transform-origin: right top;
     }
 }
