@@ -38,7 +38,7 @@
 }
 
 .top-bar {
-    @apply  border mx-auto fixed w-full top-0 left-0 bg-white z-10 pl-7 pr-7;
+    @apply  mx-auto fixed w-full top-0 left-0 bg-white z-10 pl-7 pr-7;
     @include globalTransition;
 
    .logo img{
