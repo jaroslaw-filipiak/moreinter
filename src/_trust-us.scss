@@ -1,14 +1,21 @@
 .trust-us {
-    @apply border bg-gray-f8 pl-16 pr-16; 
+    @apply bg-gray-f8  pl-6 pr-6 pt-10 pb-10 xl:pt-20 xl:pb-20 xl:pl-16 xl:pr-16; 
+
+    &--heading {
+      @include innerContainer;
+      @apply mx-auto;
+     
+    }
 
     &--logos {
-        @apply  border flex items-center justify-between;
+        @apply  flex flex-col md:flex-row items-center justify-between mt-11;
     }
 
     &--logo {
-       @apply w-60;
+       @apply w-60 mb-7 md:mb-0;
+
        img {
-         filter: grayscale(100%);
+        //  filter: grayscale(100%);
        }
     }
 }
