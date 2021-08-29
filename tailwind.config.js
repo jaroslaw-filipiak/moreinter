@@ -24,9 +24,12 @@ module.exports = {
       'main-blue': '#497EC0',
       'gray-7070': '#707070',
       'black': '#000',
+      'white': '#fff',
     },
     extend: {
-     
+      screens: {
+        '3xl': '1900px',
+      }
     },
   },
   variants: {

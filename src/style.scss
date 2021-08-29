@@ -3,19 +3,55 @@
 @tailwind utilities;
 
 @import './typo';
+@import './video';
+
+.border {
+    @apply border-dotted border-gray-7070;
+}
+
+@mixin globalTransition {
+    transition: all .3s ease-in-out;
+  }
+
 
 
 .top-bar {
-    @apply pt-7 pb-7;
+    @apply  border mx-auto fixed w-full top-0 left-0 bg-white;
+   @include globalTransition;
+
+   .logo img{
+    width: 160px;
+    @include globalTransition;
+   }
+   
+    &--inner {
+        max-width: 1234px;
+        height: 130px;
+        @apply w-full mx-auto flex items-center justify-between;
+        @include globalTransition;
+    } 
     
     ul.main-nav {
-        @apply flex border font-book;
+        @apply flex font-book;
         li {
             @apply mr-12;
-            
+
             a {
                 @apply text-main-blue uppercase text-tiny;
             }
         }
     }
+}
+
+.is-sticky {
+   
+
+    .top-bar--inner {
+        height: 75px;
+    }
+
+    .logo img{
+        width: 92px;
+       }
+    
 }
