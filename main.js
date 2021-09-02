@@ -23,7 +23,7 @@ const swiper = new Swiper();
 
 const map = () => {
   var createMap = {
-    center: new google.maps.LatLng(-23.30773, -51.17512),
+    center: new google.maps.LatLng(52.412320, 16.922790),
     zoom: 16,
     panControl: false,
     zoomControl: false,
@@ -35,7 +35,7 @@ const map = () => {
   },
     mapContainer = new google.maps.Map(document.getElementById("map"), createMap),
     customIcon = "/images/pin.png",
-    customPosition = new google.maps.LatLng(-23.30773, -51.17512),
+    customPosition = new google.maps.LatLng(52.412320, 16.922790),
     drawOutput = new google.maps.Marker({
       position: customPosition,
       map: mapContainer,
