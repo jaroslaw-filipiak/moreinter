@@ -99,3 +99,10 @@
     @apply hidden md:flex;
 }
 
+.preloader {
+    @apply w-screen h-screen fixed left-0 top-0 bg-white flex items-center justify-center z-40 overflow-hidden;
+
+    img {
+        @apply w-52;
+    }
+}

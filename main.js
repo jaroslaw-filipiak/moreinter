@@ -57,3 +57,10 @@ $('#chooseFile').bind('change', function () {
     $("#noFile").text(filename.replace("C:\\fakepath\\", ""));
   }
 });
+
+
+window.addEventListener('DOMContentLoaded', () => {
+
+  setTimeout(() => { $('.preloader').fadeOut('1000'); }, 1500);
+
+})
