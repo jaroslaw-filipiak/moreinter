@@ -2,13 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
+
+
 @mixin globalTransition {
     transition: all .3s ease-in-out;
   }
 
 @mixin innerContainer {
-    max-width: 1380px;
-    // border: 1px dashed rgb(155, 6, 6);
+    max-width: 1350px;
+    // border: 1px dashed rgb(25, 0, 255);
+    margin: 0 auto;
 }
 
 @import './debug';
@@ -26,9 +29,9 @@
 @import './footer';
 
 
-.border {
-    @apply border-dotted border-gray-7070;
-}
+// .border {
+//     @apply border-dotted border-gray-7070;
+// }
 
 
 

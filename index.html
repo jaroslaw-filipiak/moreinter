@@ -9,9 +9,12 @@
 
   <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false"></script>
 
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/SlickNav/1.0.10/jquery.slicknav.js" integrity="sha512-AmJ0T6lpw/ZQtCleMyfbraDy8AGQ9tWaB/PmRkXdKxH9Kvo0oTuW6+2hTEQ89mHkFIO/LpColEe3+QE+FJtgIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/SlickNav/1.0.10/jquery.slicknav.js"
+    integrity="sha512-AmJ0T6lpw/ZQtCleMyfbraDy8AGQ9tWaB/PmRkXdKxH9Kvo0oTuW6+2hTEQ89mHkFIO/LpColEe3+QE+FJtgIg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 
 </head>
@@ -84,14 +87,14 @@
           </div>
         </div>
       </div>
-    
+
     </section>
     <section class="how-we-work">
       <div class="how-we-work--heading">
         <p class="text-xl font-light uppercase text-gray-7070">Nasza ścieżka do sukcesu</p>
         <h3 class="text-4xl text-black font-book uppercase font-bold">Jak pracujemy</h3>
       </div>
-      
+
       <div class="how-we-work--items">
         <div class="how-we-work--item">
           <img src="./svg/how-we-work/more_strona_analiza.svg" alt="">
@@ -128,7 +131,7 @@
       <div class="trust-us--heading">
         <h3 class="text-4xl text-black font-book uppercase font-bold">Zaufali nam</h3>
       </div>
-      
+
       <div class="trust-us--logos">
         <div class="trust-us--logo">
           <img src="./images/logos/auraton-gs.png" alt="auraton">
@@ -147,15 +150,15 @@
         </div>
       </div>
     </section>
-    <section class="contact hidden">
+    <section class="contact">
       <p class="text-xl font-light uppercase text-gray-7070">Masz projekt ?</p>
       <h3 class="text-4xl text-black font-book uppercase font-bold">Napisz do nas</h3>
       <form action="" method="post">
 
         <input name="name" id="name" type="text" placeholder="Imię i nazwisko (nazwa firmy) ">
 
-        <div class="flex w-8/12 form-row-2">
-          <div>
+        <div class="flex flex-wrap xl:flex-nowrap xl:w-8/12 form-row-2 mt-9 mb-9">
+          <div class="xl:mr-8 mb-9 xl:mb-0">
             <input name="Email" id="email" type="email" placeholder="Adres e-mail">
           </div>
 
@@ -167,6 +170,30 @@
         <textarea name="message" id="message" cols="30" rows="10" placeholder="Opisz swoje pomysły">
 
         </textarea>
+
+        <div class="file-upload bg-white mt-2">
+          <div class="file-select ">
+            <div class="file-select-button mr-3" id="fileName"><svg class="mr-3" xmlns="http://www.w3.org/2000/svg"
+                width="32.779" height="33.916" viewBox="0 0 32.779 33.916">
+                <defs>
+                  <style>
+                    .a {
+                      fill: none;
+                      stroke: #707070;
+                      stroke-linecap: round;
+                      stroke-linejoin: round;
+                      stroke-width: 3px;
+                    }
+                  </style>
+                </defs>
+                <path class="a"
+                  d="M32.16,16.575,18.375,30.36A9.005,9.005,0,0,1,5.64,17.625L19.425,3.84a6,6,0,0,1,8.49,8.49l-13.8,13.785A3,3,0,1,1,9.87,21.87L22.6,9.15"
+                  transform="translate(-1.502 -0.582)" />
+              </svg></div>
+            <div class="file-select-name" id="noFile">Załącz brief</div>
+            <input type="file" name="chooseFile" id="chooseFile">
+          </div>
+        </div>
 
         <div class="checkbox-acceptance">
           <div class="left-wrap">
@@ -189,22 +216,33 @@
       </form>
     </section>
     <footer>
-      <div class="footer hidden">
+      <div class="footer">
         <div class="footer--inner">
           <div class="footer--left">
-            <h4>More interactive</h4>
+            <h4 class="uppercase text-xl font-book text-left mb-14">More interactive</h4>
             <div class="email">
+              <img src="/svg/email-icon.svg" alt="">
               <p>biuro@moreinteractive.pl</p>
             </div>
             <div class="phone">
+              <img src="/svg/phone-icon.svg" alt="">
               <p> +48 730 797 111</p>
             </div>
             <div class="address">
+              <img src="/svg/home-icon.svg" alt="">
               <p> ul. Nowowiejskiego 39 <br> 61-733 poznań <br>NIP: 783 181 92 61</p>
             </div>
             <div class="some">
-              <div class="fb">fb</div>
-              <div class="linkedin">in</div>
+              <div class="fb">
+                <a href="#">
+                  <img src="/svg/fb_icon.svg" alt="">
+                </a>
+              </div>
+              <div class="linkedin">
+                <a href="#">
+                  <img src="/svg/linkedin_icon.svg" alt="">
+                </a>
+              </div>
             </div>
           </div>
           <div class="footer--right">
@@ -213,25 +251,25 @@
         </div>
       </div>
     </footer>
-    <div class="copy hidden">
+    <div class="copy">
       <p>Wszelkie prawa zastrzeżone</p>
       <p>More interactive @ 2021</p>
     </div>
 
   </div><!-- wrapper -->
- 
-  <script type="module" src="/main.js"></script>
-  
-<script>
 
-$(function(){
-        $('#menu').slicknav({
-          'label': '',
-         
-        });
+  <script type="module" src="/main.js"></script>
+
+  <script>
+
+    $(function () {
+      $('#menu').slicknav({
+        'label': '',
+
+      });
     });
-</script>
- 
+  </script>
+
 </body>
 
-</html> 
+</html>

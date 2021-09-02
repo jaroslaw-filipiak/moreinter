@@ -1,9 +1,9 @@
 .trust-us {
-    @apply bg-gray-f8  pl-6 pr-6 pt-10 pb-10 xl:pt-20 xl:pb-20 xl:pl-16 xl:pr-16; 
+    @apply bg-gray-f8  pt-10 pb-10 xl:pt-20 xl:pb-20 xl:pl-16 xl:pr-16; 
 
     &--heading {
       @include innerContainer;
-      @apply mx-auto;
+      @apply mx-auto pl-7 pr-7;
      
     }
 

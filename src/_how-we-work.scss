@@ -1,9 +1,14 @@
 .how-we-work {
-    @apply pl-7 pr-7 pt-16 pb-16; 
+    @apply  pt-16 pb-16; 
 
     &--heading {
         @include innerContainer;
         @apply mx-auto 2xl:mb-16;
+    }
+
+    &--heading , 
+    &--items {
+        @apply pl-7 pr-7;
     }
 
 

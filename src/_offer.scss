@@ -1,9 +1,9 @@
 .offer {
-    @apply bg-gray-f8 mx-auto pl-7 pr-7;
+    @apply bg-gray-f8 mx-auto ;
 
     &--inner {
         @include innerContainer ;
-        @apply mx-auto pt-14 ; 
+        @apply mx-auto pt-14 pl-7 pr-7; 
     }
    
 

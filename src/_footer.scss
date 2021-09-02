@@ -1,15 +1,34 @@
 .footer {
-    @apply border bg-black;
+    @apply  bg-black;
     
     &--inner {
-        @apply flex items-center justify-between;
+        @include innerContainer;
+        @apply flex flex-col xl:flex-row items-stretch justify-between text-white;
     }
 
-    &--left, &--right {
-        @apply w-6/12;
+    &--left {
+        @apply xl:w-4/12 pt-14 pb-14 pl-7 xl:pl-0;
+
+        .email, .phone , .address {
+            @apply flex items-start justify-start mb-2;
+
+            img {
+                @apply mr-5;
+            }
+        }
+    }
+
+    &--right {
+        @apply xl:w-8/12 relative xl:min-h-full h-96 xl:h-auto;
+    }
+
+    .some {
+        @apply flex items-center justify-start mt-16 ml-12;
+
+       
     }
 }
 
 .copy {
-    @apply bg-gray-7070 text-white flex items-center justify-around;;
+    @apply bg-gray-7070 text-white flex items-center justify-around font-book text-xs uppercase pt-2 pb-2;
 }
