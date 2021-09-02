@@ -34,7 +34,7 @@ const map = () => {
     mapTypeId: google.maps.MapTypeId.ROADMAP
   },
     mapContainer = new google.maps.Map(document.getElementById("map"), createMap),
-    customIcon = "https://cdn0.iconfinder.com/data/icons/20-flat-icons/128/location-pointer.png",
+    customIcon = "/images/pin.png",
     customPosition = new google.maps.LatLng(-23.30773, -51.17512),
     drawOutput = new google.maps.Marker({
       position: customPosition,
