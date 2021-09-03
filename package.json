@@ -14,7 +14,11 @@
     "vite": "^2.5.1"
   },
   "dependencies": {
+    "background-cover": "^0.1.0",
+    "gsap": "^3.7.1",
     "jquery": "^3.6.0",
+    "scrollmagic": "^2.0.8",
+    "scrollmagic-plugins": "^1.0.8",
     "slicknav": "^1.0.8",
     "swiper": "^7.0.1"
   }

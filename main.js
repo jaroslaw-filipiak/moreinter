@@ -1,5 +1,5 @@
 import './src/style.scss'
-
+import BackgroundCover from 'background-cover'
 
 window.addEventListener("scroll", function () {
   let navArea = document.querySelector(".top-bar");
@@ -62,5 +62,42 @@ $('#chooseFile').bind('change', function () {
 window.addEventListener('DOMContentLoaded', () => {
 
   setTimeout(() => { $('.preloader').fadeOut('1000'); }, 1500);
+  console.clear();
+
+  // init controller
+  var controller = new ScrollMagic.Controller();
+
+  // build scenes using a loop
+  $("p , h1 , h3, img ").each(function (i) {
+    let thisLine = $(this);
+
+    var action = gsap.timeline()
+      .from(thisLine, { duration: 1, opacity: '0', ease: "back.out(2)" })
+
+
+    new ScrollMagic.Scene({
+      triggerElement: this,
+      duration: 0,
+      triggerHook: 0.8
+    })
+      .setTween(action)
+      .addIndicators()
+      .addTo(controller)
+  });
+
+
+  // vid 
+
+  var videoContainer = document.getElementById('video-container');
+  var video = document.getElementById('video');
+
+  video.addEventListener('loadedmetadata', function () {
+    BackgroundCover(video, videoContainer);
+  })
+
+
+
 
 })
+
+
