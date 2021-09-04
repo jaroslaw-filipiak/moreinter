@@ -2,7 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-
+html {
+    scroll-behavior: smooth;
+  }
 
 @mixin globalTransition {
     transition: all .3s ease-in-out;
@@ -27,6 +29,7 @@
 @import './trust-us';
 @import './contact';
 @import './footer';
+@import './arrow';
 
 
 // .border {

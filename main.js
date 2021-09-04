@@ -61,14 +61,14 @@ $('#chooseFile').bind('change', function () {
 
 window.addEventListener('DOMContentLoaded', () => {
 
-  setTimeout(() => { $('.preloader').fadeOut('1000'); }, 1500);
-  console.clear();
+  // setTimeout(() => { $('.preloader').fadeOut('1000'); }, 1500);
+  // console.clear();
 
   // init controller
   var controller = new ScrollMagic.Controller();
 
   // build scenes using a loop
-  $("p , h1 , h3, img ").each(function (i) {
+  $("p , h1 , h3, .anim ").each(function (i) {
     let thisLine = $(this);
 
     var action = gsap.timeline()
@@ -81,9 +81,33 @@ window.addEventListener('DOMContentLoaded', () => {
       triggerHook: 0.8
     })
       .setTween(action)
+      // .addIndicators()
+      .addTo(controller)
+  });
+
+  // second scene
+
+  $(".arrow-back-1").each(function (i) {
+    let thisArrow = $(this);
+
+    var action = gsap.timeline()
+      .from(thisArrow, { duration: 1, opacity: '0', ease: "back.out(2)" })
+
+
+    new ScrollMagic.Scene({
+      triggerElement: this,
+      duration: 0,
+      triggerHook: 0.8
+    })
+      .setTween(action)
       .addIndicators()
       .addTo(controller)
   });
+
+
+
+
+
 
 
   // vid 
