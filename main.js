@@ -61,8 +61,8 @@ $('#chooseFile').bind('change', function () {
 
 window.addEventListener('DOMContentLoaded', () => {
 
-  // setTimeout(() => { $('.preloader').fadeOut('1000'); }, 1500);
-  // console.clear();
+  setTimeout(() => { $('.preloader').fadeOut('1000'); }, 1500);
+  console.clear();
 
   // init controller
   var controller = new ScrollMagic.Controller();
