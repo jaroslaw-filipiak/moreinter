@@ -1,5 +1,5 @@
-import './src/style.scss'
-import BackgroundCover from 'background-cover'
+import './src/style.scss';
+import BackgroundCover from 'background-cover';
 
 window.addEventListener("scroll", function () {
   let navArea = document.querySelector(".top-bar");
@@ -19,7 +19,6 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 Swiper.use([Navigation, Pagination]);
 const swiper = new Swiper();
-
 
 const map = () => {
   var createMap = {
@@ -60,6 +59,8 @@ $('#chooseFile').bind('change', function () {
 
 
 window.addEventListener('DOMContentLoaded', () => {
+
+  document.getElementById('video').play();
 
   setTimeout(() => { $('.preloader').fadeOut('1000'); }, 1500);
   console.clear();
@@ -103,14 +104,9 @@ window.addEventListener('DOMContentLoaded', () => {
       triggerHook: .95
     })
       .setTween(arrowTl)
-      .addIndicators()
+      // .addIndicators()
       .addTo(controller)
   });
-
-
-
-
-
 
 
   // vid 
