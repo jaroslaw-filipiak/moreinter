@@ -87,19 +87,22 @@ window.addEventListener('DOMContentLoaded', () => {
 
   // second scene
 
-  $(".arrow-back-1").each(function (i) {
-    let thisArrow = $(this);
+  $(".arrow-anim-container").each(function (i) {
+    let container = $(this);
 
-    var action = gsap.timeline()
-      .from(thisArrow, { duration: 1, opacity: '0', ease: "back.out(2)" })
+    var arrowTl = gsap.timeline();
+
+    arrowTl.from($(container).find('.arrow-back'), { duration: .5, width: '0', opacity: '0', ease: "back.out(2)" });
+    arrowTl.from($(container).find('.arrow-head'), { duration: .5, opacity: '0', ease: "back.out(2)" })
+
 
 
     new ScrollMagic.Scene({
       triggerElement: this,
       duration: 0,
-      triggerHook: 0.8
+      triggerHook: .95
     })
-      .setTween(action)
+      .setTween(arrowTl)
       .addIndicators()
       .addTo(controller)
   });

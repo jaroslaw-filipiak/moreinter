@@ -52,22 +52,38 @@
       <video id="video" src="./vid/video.mp4" autoplay loop></video>
     </section>
     <section class="about" id="about">
-      <div class="about-content">
+      <div class="about-content relative">
         <h1 class="text-xl font-light uppercase text-gray-7070 mb-1">More interactive</h1>
-        <h3 class="text-4xl text-black font-book uppercase font-bold ">O nas</h3>
+        <div class="lines-heading-wrapper">
+          <h3 class="text-4xl text-black font-book uppercase font-bold ">O nas</h3>
+          <div class="line w-80 -left-96" style="top: 44px"></div>
+          <div class="line w-80 -left-96" style="top: 64px"></div>
+          <div class="line -left-96" style="width: 620px; top: 84px"></div>
+        </div>
 
-        <h2 class="text-base text-gray-7070 font-book text-left">Lorem ipsum dolor sit amet, consetetur sadipscing
-          elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At
-          vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est
-          Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
-          tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos.</h2>
+        <div class="relative">
+          <div class="arrow-anim-container arrow-anim-container-1">
+            <div class="arrow-anim-inner relative">
+              <img class="arrow-head transform" src="./public/svg/arrow-1-head.svg" alt="">
+              <div class="arrow-back arrow-back-1 absolute bottom-0"></div>
+            </div>
+          </div>
+
+          <h2 class="text-base text-gray-7070 font-book text-left mt-20">Lorem ipsum dolor sit amet, consetetur
+            sadipscing
+            elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At
+            vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est
+            Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+            tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos.</h2>
+        </div>
+
       </div>
       <div class="about-paralax-img relative">
         <img class="z-10 relative" src="./images/mockup.png" alt="">
-        <div class="arrow-anim-container absolute right-52 bottom-36 arrow-anim-1">
+        <div class="arrow-anim-container arrow-anim-container-2">
           <div class="arrow-anim-inner relative">
-            <img src="./public/svg/arrow-head.svg" alt="">
-            <div class="arrow-back arrow-back-1 absolute bottom-0"></div>
+            <img class="arrow-head" src="./public/svg/arrow-head.svg" alt="">
+            <div class="arrow-back arrow-back-2 absolute bottom-0"></div>
           </div>
         </div>
       </div>
@@ -126,7 +142,13 @@
     <section class="how-we-work">
       <div class="how-we-work--heading">
         <p class="text-xl font-light uppercase text-gray-7070">Nasza ścieżka do sukcesu</p>
-        <h3 class="text-4xl text-black font-book uppercase font-bold">Jak pracujemy</h3>
+        <div class="lines-heading-wrapper">
+          <h3 class="text-4xl text-black font-book uppercase font-bold">Jak pracujemy</h3>
+          <div class="line w-80 -right-96" style="width: 1400px ;top: 64px"></div>
+          <div class="line w-80 -right-96" style="width: 620px;top: 84px"></div>
+          <div class="line -right-96" style="width: 620px; top: 104px"></div>
+        </div>
+
       </div>
 
       <div class="how-we-work--items">
@@ -186,7 +208,13 @@
     </section>
     <section class="contact" id="contact">
       <p class="text-xl font-light uppercase text-gray-7070">Masz projekt ?</p>
-      <h3 class="text-4xl text-black font-book uppercase font-bold">Napisz do nas</h3>
+      <div class="lines-heading-wrapper">
+        <h3 class="text-4xl text-black font-book uppercase font-bold">Napisz do nas</h3>
+        <div class="line w-80 -left-96" style="top: 44px"></div>
+        <div class="line w-80 -left-96" style="top: 64px"></div>
+        <div class="line -left-96" style="width: 620px; top: 84px"></div>
+      </div>
+
       <form netlify>
 
         <input name="name" id="name" type="text" placeholder="Imię i nazwisko (nazwa firmy) ">
