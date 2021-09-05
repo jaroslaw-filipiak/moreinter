@@ -111,12 +111,12 @@ window.addEventListener('DOMContentLoaded', () => {
 
   // vid 
 
-  var videoContainer = document.getElementById('video-container');
-  var video = document.getElementById('video');
+  // var videoContainer = document.getElementById('video-container');
+  // var video = document.getElementById('video');
 
-  video.addEventListener('loadedmetadata', function () {
-    BackgroundCover(video, videoContainer);
-  })
+  // video.addEventListener('loadedmetadata', function () {
+  //   BackgroundCover(video, videoContainer);
+  // })
 
 
 
