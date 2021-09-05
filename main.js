@@ -60,7 +60,7 @@ $('#chooseFile').bind('change', function () {
 
 window.addEventListener('DOMContentLoaded', () => {
 
-  document.getElementById('video').play();
+  // document.getElementById('video').play();
 
   setTimeout(() => { $('.preloader').fadeOut('1000'); }, 1500);
   console.clear();
