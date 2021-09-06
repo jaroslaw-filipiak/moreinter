@@ -3,110 +3,105 @@
 @tailwind utilities;
 
 html {
-    scroll-behavior: smooth;
-  }
-
-@mixin globalTransition {
-    transition: all .3s ease-in-out;
-  }
-
-@mixin innerContainer {
-    max-width: 1350px;
-    // border: 1px dashed rgb(25, 0, 255);
-    margin: 0 auto;
+  scroll-behavior: smooth;
 }
 
-// @import './debug';
+@mixin globalTransition {
+  transition: all 0.3s ease-in-out;
+}
 
-@import '/node_modules/slicknav/dist/slicknav.min.css';
+@mixin innerContainer {
+  max-width: 1350px;
+  // border: 1px dashed rgb(25, 0, 255);
+  margin: 0 auto;
+}
 
-@import './typo';
-@import './hero';
-@import './about';
-@import './offer';
-@import './how-we-work';
-@import './our-team';
-@import './trust-us';
-@import './contact';
-@import './footer';
-@import './arrow';
-@import './lines';
+@import "./debug";
 
+@import "/node_modules/slicknav/dist/slicknav.min.css";
+@import "/node_modules/swiper/swiper-bundle.min.css";
+
+@import "./typo";
+@import "./hero";
+@import "./about";
+@import "./offer";
+@import "./how-we-work";
+@import "./our-team";
+@import "./trust-us";
+@import "./contact";
+@import "./footer";
+@import "./arrow";
+@import "./lines";
 
 // .border {
 //     @apply border-dotted border-gray-7070;
 // }
 
-
-
 .slicknav_menu {
-    z-index: 9999;
-    @apply fixed left-0 top-0 w-full;
+  z-index: 9999;
+  @apply fixed left-0 top-0 w-full;
 }
 
 .top-bar {
-    @apply  mx-auto fixed w-full top-0 left-0 bg-white z-10 pl-7 pr-7;
-    @include globalTransition;
+  @apply mx-auto fixed w-full top-0 left-0 bg-white z-10 pl-7 pr-7 z-50;
+  @include globalTransition;
 
-   .logo img{
+  .logo img {
     width: 160px;
     @include globalTransition;
-   }
-   
-    &--inner {
-        @include innerContainer;
-        height: 130px;
-        @apply w-full mx-auto flex items-center justify-between;
-        @include globalTransition;
-    } 
-    
-    ul.main-nav {
-        @apply flex font-book;
-        li {
-            @apply mr-12;
+  }
 
-            a {
-                @apply text-main-blue uppercase text-tiny;
-            }
-        }
+  &--inner {
+    @include innerContainer;
+    height: 130px;
+    @apply w-full mx-auto flex items-center justify-between;
+    @include globalTransition;
+  }
+
+  ul.main-nav {
+    @apply flex font-book;
+    li {
+      @apply mr-12;
+
+      a {
+        @apply text-main-blue uppercase text-tiny;
+      }
     }
+  }
 }
 
 .is-sticky {
-   
+  .top-bar--inner {
+    height: 75px;
+  }
 
-    .top-bar--inner {
-        height: 75px;
-    }
-
-    .logo img{
-        width: 92px;
-       }
-    
+  .logo img {
+    width: 92px;
+  }
 }
 
 .slicknav_menu {
-    @apply block md:hidden bg-white;
+  @apply block md:hidden bg-white;
 }
 
 .slicknav_btn {
-    @apply bg-main-blue;
+  @apply bg-main-blue;
 }
 
 .slicknav_nav {
-    a {
-        @apply text-gray-7070;
-    }
+  a {
+    @apply text-gray-7070;
+  }
 }
 
 .top-bar {
-    @apply hidden md:flex;
+  @apply hidden md:flex;
 }
 
 .preloader {
-    @apply w-screen h-screen fixed left-0 top-0 bg-white flex items-center justify-center z-40 overflow-hidden;
+  @apply w-screen h-screen fixed left-0 top-0 bg-white flex items-center justify-center z-40 overflow-hidden;
 
-    img {
-        @apply w-52;
-    }
+  img {
+    @apply w-52;
+  }
 }

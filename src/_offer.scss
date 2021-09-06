@@ -13,35 +13,34 @@
     }
 
     .offer--item-img__hover {
-        @apply hidden;
+        @apply hidden transition-all;
     }
 
     &--item {
-        @apply w-60 flex flex-col items-center justify-center xl:ml-9 xl:mr-9 relative ;
+        @apply w-full md:w-6/12 lg:w-60 flex flex-col items-center justify-center md:pl-7 md:pr-7 lg:pl-0 lg:pr-0 lg:ml-9 lg:mr-9 relative ;
 
         p {
             @apply uppercase font-medium text-xl text-black text-center;
         }
 
-      
 
         &-content {
-            @apply absolute text-center hidden font-book text-lg cursor-default;
+            @apply lg:absolute text-center lg:hidden font-book text-lg cursor-default;
             color: #717171;
 
         }
 
         &:hover {
             .offer--item-content {
-                    @apply block;
+                    @apply lg:block;
                 }
 
             .offer--item-img {
-                @apply hidden;
+                @apply lg:hidden;
             }
 
             .offer--item-img__hover {
-                @apply block opacity-20;
+                @apply lg:block lg:opacity-20 transform lg:scale-110 transition-all;
             }
 
         }
