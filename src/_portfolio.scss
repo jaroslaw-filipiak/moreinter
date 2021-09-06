@@ -1,0 +1,29 @@
+.portfolio-hero {
+  height: calc(100vh - 130px);
+  @apply relative mt-36;
+
+  &--inner {
+    // @include innerContainer;
+    @apply flex flex-col xl:flex-row items-center justify-center h-full;
+  }
+
+  &-left {
+    @apply bg-main-blue w-full h-full xl:w-7/12 flex items-center justify-center;
+
+    .swiper-slide {
+      @apply flex items-center justify-center h-full bg-cover bg-no-repeat;
+    }
+  }
+
+  &-right {
+    @apply h-full w-full xl:w-5/12 flex flex-col items-start justify-center text-left pl-11 pr-11;
+
+    .portfolio-right-excerpt {
+      @apply mt-16;
+
+      a {
+        @apply inline-block mt-20;
+      }
+    }
+  }
+}
