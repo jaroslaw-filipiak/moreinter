@@ -177,7 +177,7 @@ window.addEventListener("DOMContentLoaded", () => {
         triggerHook: 0.95,
       })
         .setTween(linesTl)
-        .addIndicators()
+        // .addIndicators()
         .addTo(controller);
     });
   }
