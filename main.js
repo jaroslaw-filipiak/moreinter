@@ -155,7 +155,7 @@ window.addEventListener("DOMContentLoaded", () => {
       triggerHook: 0.95,
     })
       .setTween(linesTl)
-      .addIndicators()
+      // .addIndicators()
       .addTo(controller);
   });
 
@@ -256,7 +256,7 @@ window.addEventListener("DOMContentLoaded", () => {
     duration: 2000,
   })
     .addTo(controller)
-    .addIndicators() // add indicators (requires plugin)
+    // .addIndicators()
     .on("update", function (e) {
       // $("#scrollDirection").text(e.target.controller().info("scrollDirection"));
     })
