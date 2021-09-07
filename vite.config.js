@@ -5,6 +5,7 @@ export default {
     rollupOptions: {
       input: {
         main: resolve(__dirname, "index.html"),
+        portfolio: resolve(__dirname, "portfolio.html"),
       },
       output: {
         entryFileNames: `[name].js`,
