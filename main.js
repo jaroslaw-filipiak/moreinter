@@ -128,36 +128,6 @@ window.addEventListener("DOMContentLoaded", () => {
       .addTo(controller);
   });
 
-  if (document.querySelector(".arrow-anim-container")) {
-    // second scene
-    $(".arrow-anim-container").each(function (i) {
-      let container = $(this);
-
-      var arrowTl = gsap.timeline();
-
-      arrowTl.from($(container).find(".arrow-back"), {
-        duration: 0.5,
-        width: "0",
-        opacity: "0",
-        ease: "back.out(2)",
-      });
-      arrowTl.from($(container).find(".arrow-head"), {
-        duration: 0.5,
-        opacity: "0",
-        ease: "back.out(2)",
-      });
-
-      new ScrollMagic.Scene({
-        triggerElement: this,
-        duration: 0,
-        triggerHook: 0.95,
-      })
-        .setTween(arrowTl)
-        // .addIndicators()
-        .addTo(controller);
-    });
-  }
-
   if (document.querySelector(".line")) {
     // lines
     $(".line").each(function (i) {

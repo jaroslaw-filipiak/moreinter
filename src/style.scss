@@ -30,7 +30,6 @@ html {
 @import "./trust-us";
 @import "./contact";
 @import "./footer";
-@import "./arrow";
 @import "./lines";
 
 @import "./portfolio";
@@ -45,7 +44,7 @@ html {
 }
 
 .top-bar {
-  @apply mx-auto fixed w-full top-0 left-0 bg-white z-10 pl-7 pr-7 z-50;
+  @apply mx-auto fixed w-full top-0 left-0 bg-white z-10 pl-7 pr-7;
   @include globalTransition;
 
   .logo img {

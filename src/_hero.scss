@@ -1,3 +1,10 @@
 .hero {
-    @apply w-full  bg-gray-7070 relative;
+  @apply w-full  bg-gray-7070 relative;
+  margin-top: 49px;
+
+  &__video {
+    @media (min-width: 768px) {
+      margin-top: 130px;
+    }
+  }
 }
