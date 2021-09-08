@@ -54,7 +54,7 @@
       <img src="./images/logo.gif" alt="logo moreinteractive.pl" />
     </div>
     <div class="wrapper 2xl:container mx-auto">
-      <div class="top-bar border">
+      <div class="top-bar">
         <div class="top-bar--inner">
           <div class="logo">
             <a href="/index.html">
@@ -446,12 +446,14 @@
   <script>
     $(document).ready(function () {
       $(".portfolio-row-1").slick({
-        infinite: true,
-        speed: 34000,
+        // infinite: true,
+        // speed: 34000,
         slidesToShow: 4,
         autoplay: true,
-        autoplaySpeed: 0,
-        cssEase: "linear",
+        autoplaySpeed: 1600,
+        cssEase: "ease-in-out",
+        draggable: true,
+        grabCursor: true,
         responsive: [
           {
             breakpoint: 1366,
@@ -489,12 +491,14 @@
 
       $(".portfolio-row-2").slick({
         rtl: true,
-        infinite: true,
-        speed: 34000,
+        // infinite: true,
+        // speed: 34000,
         slidesToShow: 4,
         autoplay: true,
-        autoplaySpeed: 0,
-        cssEase: "linear",
+        autoplaySpeed: 2600,
+        cssEase: "ease-in-out",
+        draggable: true,
+        grabCursor: true,
         responsive: [
           {
             breakpoint: 1366,
