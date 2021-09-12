@@ -194,36 +194,36 @@ window.addEventListener("DOMContentLoaded", () => {
     });
 
     const firstAnim = () => {
-      anim1.setSpeed(0.5);
+      anim1.setSpeed(4);
       anim1.play();
     };
 
     const arrowAnim = () => {
       setTimeout(function () {
-        anim4.setSpeed(0.5);
+        anim1.setSpeed(4);
         anim4.play();
-      }, 3800);
+      }, 500);
     };
 
     const secondAnim = () => {
       setTimeout(function () {
-        anim2.setSpeed(0.5);
+        anim1.setSpeed(4);
         anim2.play();
-      }, 5000);
+      }, 900);
     };
 
     const secondArrowAnim = () => {
       setTimeout(function () {
-        anim5.setSpeed(0.5);
+        anim1.setSpeed(4);
         anim5.play();
-      }, 5500);
+      }, 1400);
     };
 
     const lastAnim = () => {
       setTimeout(function () {
-        anim3.setSpeed(0.4);
+        anim1.setSpeed(4);
         anim3.play();
-      }, 6000);
+      }, 2500);
     };
 
     var lottieScene = new ScrollMagic.Scene({
