@@ -1,16 +1,16 @@
 .about {
-    @apply flex flex-col-reverse lg:flex-row items-center pl-7 pr-7 mx-auto ; 
-    @include innerContainer;
+  @apply flex flex-col-reverse lg:flex-row items-center pl-7 pr-7 mx-auto w-full;
+  @include innerContainer;
 
-    &-content {
-        @apply w-full lg:w-5/12 2xl:pr-36 pb-20 lg:pb-0;
-    }
+  &-content {
+    @apply w-full lg:w-5/12 2xl:pr-36 pb-20 lg:pb-0;
+  }
 
-    &-paralax-img {
-        @apply w-full lg:w-7/12 relative -top-16;
-    }
+  &-paralax-img {
+    @apply w-full lg:w-7/12 relative -top-16;
+  }
 
-    h3 {
-        @apply mb-16;
-    }
+  h3 {
+    @apply mb-16;
+  }
 }
