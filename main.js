@@ -49,7 +49,7 @@ if (document.querySelector(".mySwiper")) {
   var swiper = new Swiper(".mySwiper", {
     // centeredSlides: true,
     slidesPerView: 1,
-    loop: true,
+    loop: false,
     autoplay: {
       delay: 200,
       disableOnInteraction: false,
@@ -177,6 +177,10 @@ window.addEventListener("DOMContentLoaded", () => {
       path: "/json/3.json",
     });
 
+    anim3.addEventListener("complete", () => {
+      // alert("dfdf");
+    });
+
     const anim4 = lottie.loadAnimation({
       container: document.getElementById("item4"),
       renderer: "svg",
@@ -194,7 +198,7 @@ window.addEventListener("DOMContentLoaded", () => {
     });
 
     const firstAnim = () => {
-      anim1.setSpeed(4);
+      anim1.setSpeed(2);
       anim1.play();
     };
 
@@ -221,16 +225,21 @@ window.addEventListener("DOMContentLoaded", () => {
 
     const lastAnim = () => {
       setTimeout(function () {
-        anim1.setSpeed(4);
+        // anim1.setSpeed(4);
         anim3.play();
-      }, 2500);
+      }, 2000);
     };
 
     var lottieScene = new ScrollMagic.Scene({
       triggerElement: "#item1",
       duration: 2000,
+      triggerHook: 0.5,
+      reverse: true,
     })
       .addTo(controller)
+      .addIndicators({
+        name: "jak pracujemy",
+      })
       .on("enter leave", function (e) {
         firstAnim();
         arrowAnim();
