@@ -16,7 +16,7 @@ html {
   margin: 0 auto;
 }
 
-@import "./debug";
+// @import "./debug";
 
 @import "/node_modules/slicknav/dist/slicknav.min.css";
 @import "/node_modules/swiper/swiper-bundle.min.css";
@@ -39,13 +39,14 @@ html {
 // }
 
 .slicknav_menu {
-  z-index: 9999;
+  z-index: 840;
   @apply fixed left-0 top-0 w-full;
 }
 
 .top-bar {
   @apply mx-auto fixed w-full top-0 left-0 bg-white z-30 pl-7 pr-7;
   @include globalTransition;
+  z-index: 840;
 
   .logo img {
     width: 160px;
@@ -100,7 +101,8 @@ html {
 }
 
 .preloader {
-  @apply w-screen h-screen fixed left-0 top-0 bg-white flex items-center justify-center z-40 overflow-hidden;
+  @apply w-screen h-screen fixed left-0 top-0 bg-white flex items-center justify-center overflow-hidden;
+  z-index: 850;
 
   img {
     @apply w-52;

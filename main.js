@@ -111,7 +111,7 @@ window.addEventListener("DOMContentLoaded", () => {
   var controller = new ScrollMagic.Controller();
 
   // build scenes using a loop
-  $("p , h1 , h3, .anim ").each(function (i) {
+  $("h1 , h3, .anim ").each(function (i) {
     let thisLine = $(this);
 
     var action = gsap
@@ -137,6 +137,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
       linesTl.from($(container), {
         opacity: 1,
+        backgroundImage: "linear-gradient( 90deg, #e87d00 0%, #e87d00 100%)",
         width: "0",
         ease: "ease-in",
       });
