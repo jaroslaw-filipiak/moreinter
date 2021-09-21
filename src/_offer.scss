@@ -1,48 +1,83 @@
 .offer {
-    @apply bg-gray-f8 mx-auto ;
+  @apply bg-gray-f8 mx-auto;
 
-    &--inner {
-        @include innerContainer ;
-        @apply mx-auto pt-14 pl-7 pr-7; 
+  &--inner {
+    @include innerContainer;
+    @apply mx-auto pt-14 pl-7 pr-7;
+  }
+
+  &--items {
+    @apply flex items-stretch justify-center flex-wrap mx-auto w-full lg:w-4/5 mt-14 pb-20;
+  }
+
+  .offer--item-img__hover {
+    @apply hidden transition-all;
+  }
+
+  &--item {
+    @apply w-full md:w-6/12 lg:w-60 flex flex-col items-center justify-center md:pl-7 md:pr-7 lg:pl-0 lg:pr-0 lg:ml-9 lg:mr-9 relative;
+
+    p {
+      @apply uppercase font-medium text-xl text-black text-center;
     }
-   
 
-    &--items {
-        @apply flex items-stretch justify-center flex-wrap mx-auto w-full lg:w-4/5 mt-14 pb-20;
-       
+    &-content {
+      @apply lg:absolute text-center  font-book text-lg cursor-default flex flex-col items-center justify-center w-full h-full left-0 top-0 lg:hidden;
+      //   @apply lg:hidden;
+      color: #717171;
+
+      //   min-height: 164px;
     }
 
-    .offer--item-img__hover {
-        @apply hidden transition-all;
+    &:hover {
+      .offer--item-content {
+        @apply lg:flex;
+      }
+
+      .offer--item-img {
+        @apply lg:hidden;
+      }
+
+      .offer--item-img__hover {
+        @apply lg:flex lg:opacity-20 transform lg:scale-110 transition-all;
+      }
     }
 
-    &--item {
-        @apply w-full md:w-6/12 lg:w-60 flex flex-col items-center justify-center md:pl-7 md:pr-7 lg:pl-0 lg:pr-0 lg:ml-9 lg:mr-9 relative ;
-
-        p {
-            @apply uppercase font-medium text-xl text-black text-center;
-        }
-
-
-        &-content {
-            @apply lg:absolute text-center lg:hidden font-book text-lg cursor-default;
-            color: #717171;
-
-        }
-
-        &:hover {
-            .offer--item-content {
-                    @apply lg:block;
-                }
-
-            .offer--item-img {
-                @apply lg:hidden;
-            }
-
-            .offer--item-img__hover {
-                @apply lg:block lg:opacity-20 transform lg:scale-110 transition-all;
-            }
-
-        }
+    &-1 {
+      .offer--item-img,
+      .offer--item-img__hover {
+      }
     }
+
+    &-2 {
+      .offer--item-img,
+      .offer--item-img__hover {
+        @apply relative lg:top-4;
+      }
+    }
+
+    &-3 {
+      .offer--item-img,
+      .offer--item-img__hover {
+      }
+    }
+
+    &-4 {
+      .offer--item-img,
+      .offer--item-img__hover {
+      }
+    }
+
+    &-5 {
+      .offer--item-img,
+      .offer--item-img__hover {
+      }
+    }
+
+    &-6 {
+      .offer--item-img,
+      .offer--item-img__hover {
+      }
+    }
+  }
 }

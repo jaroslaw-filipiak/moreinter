@@ -1,30 +1,29 @@
 .our-team {
+  @apply flex items-stretch pb-20 md:pb-28 2xl:pb-52 pl-7 pr-7;
 
-    @apply flex items-stretch pb-20 md:pb-28 2xl:pb-52 pl-7 pr-7;
+  &--inner {
+    @apply w-full xl:w-11/12 relative flex flex-col xl:flex-row items-end justify-center xl:pt-48 2xl:pt-96;
+  }
 
-    &--inner {
-        @apply w-full xl:w-11/12 relative flex flex-col xl:flex-row items-end justify-center xl:pt-48 2xl:pt-96;
+  &--content {
+    @apply xl:w-8/12 2xl:w-6/12  lg:pt-96 xl:pt-0 xl:pl-72 2xl:pl-80;
+
+    p {
+      @apply mt-16;
     }
+  }
 
-    &--content {
-        @apply xl:w-8/12 2xl:w-6/12  lg:pt-96 xl:pt-0 xl:pl-72 2xl:pl-80 ;
+  img {
+    @apply lg:absolute md:mx-auto;
+  }
 
-        p {
-            @apply mt-16;
-        }
-    }
+  .img-left {
+    @apply lg:transform lg:scale-75 2xl:scale-100 -left-72 top-0;
+    transform-origin: left top;
+  }
 
-    img {
-        @apply lg:absolute md:mx-auto;
-    }
-
-    .img-left {
-        @apply lg:transform lg:scale-75 2xl:scale-100 -left-72 top-0;
-        transform-origin: left top;
-    }
-
-    .img-right {
-        @apply hidden lg:block lg:transform lg:scale-75 2xl:scale-100 right-0 2xl:right-96 3xl:right-72 top-0;
-        transform-origin: right top;
-    }
+  .img-right {
+    @apply hidden lg:block lg:transform lg:scale-75 2xl:scale-100 right-0 top-0;
+    transform-origin: right top;
+  }
 }

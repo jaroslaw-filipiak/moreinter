@@ -27,7 +27,7 @@ if (document.querySelector(".swiper")) {
     // centeredSlides: true,
     autoplay: {
       delay: 200,
-      disableOnInteraction: false,
+      disableOnInteraction: true,
     },
     breakpoints: {
       640: {
