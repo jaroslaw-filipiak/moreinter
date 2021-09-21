@@ -12,7 +12,7 @@
   }
 
   &--items {
-    @apply flex flex-col lg:flex-row items-center justify-between mx-auto xl:w-full pt-16 xl:pt-32 2xl:pt-56 2xl:w-9/12;
+    @apply flex flex-col lg:flex-row items-center justify-between mx-auto xl:w-full pt-24 md:pt-16 xl:pt-32 2xl:pt-56 2xl:w-9/12;
   }
 
   &--item {

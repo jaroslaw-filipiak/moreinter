@@ -11,10 +11,11 @@ window.addEventListener("scroll", function () {
   }
 });
 
-import Swiper, { Navigation, Pagination, Autoplay } from "swiper";
+import Swiper, { Navigation, Pagination } from "swiper";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import Rellax from "rellax";
 Swiper.use([Navigation, Pagination]);
 
 if (document.querySelector(".swiper")) {
@@ -238,9 +239,9 @@ window.addEventListener("DOMContentLoaded", () => {
       reverse: true,
     })
       .addTo(controller)
-      .addIndicators({
-        name: "jak pracujemy",
-      })
+      // .addIndicators({
+      //   name: "jak pracujemy",
+      // })
       .on("enter leave", function (e) {
         firstAnim();
         arrowAnim();
@@ -250,3 +251,7 @@ window.addEventListener("DOMContentLoaded", () => {
       });
   }
 });
+
+if (document.querySelector(".rellax")) {
+  var rellax = new Rellax(".rellax");
+}

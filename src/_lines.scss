@@ -15,48 +15,49 @@
 
 .line-1 {
   @apply w-48 -left-10 md:-left-24 2xl:-left-96;
-  top: 64px;
+  top: 28px;
 
   @media (min-width: 1280px) {
-    @apply -left-52;
+    left: -330px;
     width: 320px;
   }
 
   @media (min-width: 1536px) {
-    @apply -left-80;
-    width: 420px;
+    left: -360px;
+    width: 320px;
   }
 }
 
 .line-2 {
-  @apply w-48 -left-7 md:-left-24  2xl:-left-96;
-  top: 84px;
+  @apply w-48 -left-10 md:-left-24  2xl:-left-96;
+  top: 48px;
 
   @media (min-width: 1280px) {
-    @apply -left-52;
+    left: -330px;
     width: 320px;
   }
+
   @media (min-width: 1536px) {
-    @apply -left-80;
-    width: 420px;
+    left: -360px;
+    width: 320px;
   }
 }
 
 .line-3 {
   @apply 2xl:-left-96 hidden lg:block lg:-left-36 w-48;
-  top: 104px;
+  top: 68px;
 
   @media (min-width: 1280px) {
     @apply -left-52;
   }
 
   @media (min-width: 1536px) {
-    @apply -left-80;
+    left: -360px;
   }
 }
 
 .line-4 {
-  @apply w-40 md:w-96 -right-16 lg:-right-80 md:-right-96;
+  @apply w-96 md:w-96 -right-16 lg:-right-80 md:-right-96;
   top: 64px;
 
   @media (min-width: 768px) {
@@ -68,7 +69,7 @@
 }
 
 .line-5 {
-  @apply w-96 lg:w-80 -right-24 lg:-right-80 md:-right-96;
+  @apply w-96 lg:w-80 -right-16 lg:-right-80 md:-right-96;
   top: 84px;
 
   @media (min-width: 768px) {
@@ -77,13 +78,12 @@
 }
 
 .line-6 {
-  @apply w-96 md:-right-96 hidden xl:block;
+  @apply hidden lg:block w-96 lg:w-80 -right-24 lg:-right-80 md:-right-96;
 
   top: 104px;
 
   @media (min-width: 768px) {
     width: 620px;
-    @apply -right-96;
   }
 }
 
