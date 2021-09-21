@@ -15,7 +15,11 @@
 
 .line-1 {
   @apply w-48 -left-10 md:-left-24 2xl:-left-96;
-  top: 28px;
+
+  top: 48px;
+  @media (min-width: 640px) {
+    top: 28px;
+  }
 
   @media (min-width: 1280px) {
     left: -330px;
@@ -30,7 +34,11 @@
 
 .line-2 {
   @apply w-48 -left-10 md:-left-24  2xl:-left-96;
-  top: 48px;
+  top: 68px;
+
+  @media (min-width: 640px) {
+    top: 48px;
+  }
 
   @media (min-width: 1280px) {
     left: -330px;

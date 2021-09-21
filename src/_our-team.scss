@@ -17,6 +17,11 @@
     @apply lg:absolute md:mx-auto;
   }
 
+  .img-hover {
+    @apply hover:opacity-0;
+    transition: all 0.3s cubic-bezier(0.39, 0.575, 0.565, 1);
+  }
+
   .img-left {
     @apply lg:transform lg:scale-75 2xl:scale-100 -left-72 top-0;
     transform-origin: left top;
