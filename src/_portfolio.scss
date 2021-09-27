@@ -1,6 +1,6 @@
 .portfolio-hero {
   height: calc(100vh - 130px);
-  @apply relative mt-36;
+  @apply relative xl:mt-36;
 
   &--inner {
     @apply flex flex-col xl:flex-row items-center justify-center h-full;
@@ -15,7 +15,7 @@
   }
 
   &-right {
-    @apply h-full w-full xl:w-5/12 flex flex-col items-start justify-center text-left pl-11 pr-11;
+    @apply h-full w-full xl:w-5/12 flex flex-col items-start justify-center text-left pl-11 pr-11 pt-4 xl:pt-0;
 
     .portfolio-right-excerpt {
       @apply mt-16;
@@ -78,15 +78,15 @@
   @apply pl-7 pr-7 pt-16 pb-16 flex items-center justify-center mx-auto;
 
   a {
-    @apply text-xl uppercase text-gray-7070 w-64 pl-11 pr-11 flex items-center justify-center border-2 text-center pt-2 pb-2;
+    @apply text-xl uppercase text-white w-64 pl-11 pr-11 flex items-center justify-center border-2 text-center pt-2 pb-2 bg-main-blue hover:bg-main-orange;
 
     &:hover {
       @apply text-white;
-      background: linear-gradient(
-        90deg,
-        rgba(232, 125, 0, 1) 0%,
-        rgba(73, 126, 192, 1) 100%
-      );
+      // background: linear-gradient(
+      //   90deg,
+      //   rgba(232, 125, 0, 1) 0%,
+      //   rgba(73, 126, 192, 1) 100%
+      // );
     }
   }
 }
