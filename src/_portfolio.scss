@@ -30,6 +30,12 @@
   .swiper-button-prev {
     color: rgba(188, 188, 188, 0.5);
   }
+
+  .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
+  .swiper-pagination-horizontal.swiper-pagination-bullets
+    .swiper-pagination-bullet {
+    background: #bcbcbc;
+  }
 }
 
 .portfolio-other--heading {
