@@ -27,8 +27,11 @@ module.exports = {
     },
     colors: {
       "main-blue": "#497EC0",
+      "main-orange": "#E87D00",
       "gray-7070": "#707070",
       "gray-f8": "#f8f8f8",
+      "gray-f7": "#f7f7f7",
+      "gray-ef": "#efefef",
       black: "#000",
       white: "#fff",
     },

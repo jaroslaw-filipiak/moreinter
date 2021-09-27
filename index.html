@@ -404,13 +404,12 @@
           </div>
 
           <textarea
+            placeholder="Opisz swoje pomysły"
             name="message"
             id="message"
             cols="30"
             rows="10"
-            placeholder="Opisz swoje pomysły"
-          >
-          </textarea>
+          ></textarea>
 
           <div class="file-upload bg-white mt-2">
             <div class="file-select">
@@ -446,16 +445,34 @@
           </div>
 
           <div class="checkbox-acceptance">
+            <div id="template" style="display: none">
+              Administratorem Państwa danych osobowych, które zostały
+              umieszczone w formularzu kontaktowym, jest MORE Interactive Sp. z
+              o.o. Sp. K. z siedzibą w Poznaniu. Przekazane dane osobowe będą
+              przetwarzane w celu udzielenia odpowiedzi na Państwa zapytanie.
+              Informacje o Państwa prawach, podstawie prawnej przetwarzania
+              danych osobowych oraz okresie ich przechowywania znajdują się
+
+              <a href="/public/docs/Ochrona_danych_osobowych.pdf">tutaj</a>
+            </div>
             <div class="form-group">
               <input type="checkbox" id="html" />
               <label for="html"> </label>
             </div>
             <div class="right-wrap">
-              <label for="random">
+              <label
+                class="font-light italic text-gray-7070 opacity-50"
+                for="random"
+              >
                 W związku ze złożonym zapytaniem oświadczam, że zapoznałam/em
-                się z treścią klauzuli informacyjnej dotyczącej przetwarzania
-                moich danych osobowych przez MORE Interactive Sp. z o.o. Sp. K.
-                z siedzibą w Poznaniu.
+                się z treścią
+                <span
+                  class="font-semibold cursor-pointer acceptance-tooltip"
+                  href="#"
+                  >klauzuli informacyjnej</span
+                >
+                dotyczącej przetwarzania moich danych osobowych przez MORE
+                Interactive Sp. z o.o. Sp. K. z siedzibą w Poznaniu.
               </label>
             </div>
           </div>

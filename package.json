@@ -23,6 +23,7 @@
     "scrollmagic": "^2.0.8",
     "scrollmagic-plugins": "^1.0.8",
     "slicknav": "^1.0.8",
-    "swiper": "^7.0.1"
+    "swiper": "^7.0.1",
+    "tippy.js": "^6.3.1"
   }
 }

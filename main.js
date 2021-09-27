@@ -1,6 +1,19 @@
 import "./src/style.scss";
 import lottie from "lottie-web";
 
+import tippy from "tippy.js";
+import "tippy.js/dist/tippy.css";
+
+const template = document.getElementById("template");
+
+tippy(".acceptance-tooltip", {
+  content: template.innerHTML,
+
+  allowHTML: true,
+  trigger: "click",
+  maxWidth: 800,
+});
+
 window.addEventListener("scroll", function () {
   let navArea = document.querySelector(".top-bar");
 
