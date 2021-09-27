@@ -4,15 +4,17 @@ import lottie from "lottie-web";
 import tippy from "tippy.js";
 import "tippy.js/dist/tippy.css";
 
-const template = document.getElementById("template");
+if (document.querySelector("#template")) {
+  const template = document.getElementById("template");
 
-tippy(".acceptance-tooltip", {
-  content: template.innerHTML,
+  tippy(".acceptance-tooltip", {
+    content: template.innerHTML,
 
-  allowHTML: true,
-  trigger: "click",
-  maxWidth: 800,
-});
+    allowHTML: true,
+    trigger: "click",
+    maxWidth: 800,
+  });
+}
 
 window.addEventListener("scroll", function () {
   let navArea = document.querySelector(".top-bar");
@@ -64,6 +66,10 @@ if (document.querySelector(".mySwiper")) {
     // centeredSlides: true,
     slidesPerView: 1,
     loop: false,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
     autoplay: {
       delay: 200,
       disableOnInteraction: false,
