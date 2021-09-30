@@ -3,7 +3,7 @@
 
   &--heading {
     @include innerContainer;
-    @apply mx-auto pl-7 pr-7;
+    @apply mx-auto pl-7 pr-7  text-3xl md:text-4xl text-black font-book uppercase font-bold mb-10;
   }
 
   &--logos {
@@ -27,4 +27,20 @@
       }
     }
   }
+}
+
+// .logos-slide {
+//   @apply border;
+//   width: 270px !important;
+// }
+
+.logos-slicks-slide-inner {
+  .slick-slide {
+    @apply pl-10 pr-10;
+  }
+}
+
+.slick-slide {
+  // width: 200px;
+  // @apply border;
 }

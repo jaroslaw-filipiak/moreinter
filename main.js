@@ -33,34 +33,6 @@ import "swiper/css/pagination";
 import Rellax from "rellax";
 Swiper.use([Navigation, Pagination]);
 
-if (document.querySelector(".swiper")) {
-  // code here
-}
-
-if (document.querySelector(".swiper")) {
-  var swiper = new Swiper(".swiper", {
-    // centeredSlides: true,
-    autoplay: {
-      delay: 200,
-      disableOnInteraction: true,
-    },
-    breakpoints: {
-      640: {
-        slidesPerView: 1,
-        spaceBetween: 20,
-      },
-      768: {
-        slidesPerView: 3,
-        spaceBetween: 40,
-      },
-      1024: {
-        slidesPerView: 5,
-        spaceBetween: 50,
-      },
-    },
-  });
-}
-
 if (document.querySelector(".mySwiper")) {
   var swiper = new Swiper(".mySwiper", {
     // centeredSlides: true,

@@ -42,6 +42,29 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.min.js"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"
+      integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"
+      integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css"
+      integrity="sha512-wR4oNhLBHf7smjy0K4oqzdWumd+r5/+6QO/vDda76MW5iug4PT7v86FoEkySIJft3XA0Ae6axhIvHrqwm793Nw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
 
   <body>
@@ -315,37 +338,41 @@
       </section>
       <section class="trust-us">
         <div class="trust-us--heading">
-          <h3
-            class="
-              text-3xl
-              md:text-4xl
-              text-black
-              font-book
-              uppercase
-              font-bold
-            "
-          >
-            Zaufali nam
-          </h3>
+          <h3 class="">Zaufali nam</h3>
         </div>
 
-        <div class="swiper">
+        <div class="logos-slick">
           <!-- Additional required wrapper -->
-          <div class="swiper-wrapper">
+          <div class="logos-slicks-slide-inner">
             <!-- Slides -->
-            <div class="swiper-slide">
+            <div class="logos-slide">
               <img src="./images/logos/auraton-gs.png" alt="auraton" />
             </div>
-            <div class="swiper-slide">
+            <div class="logos-slide">
               <img src="./images/logos/lars-gs.png" alt="lars" />
             </div>
-            <div class="swiper-slide">
+            <div class="logos-slide">
               <img src="./images/logos/dalpo-gs.png" alt="dalpo" />
             </div>
-            <div class="swiper-slide">
+            <div class="logos-slide">
               <img src="./images/logos/labo-gs.png" alt="labo" />
             </div>
-            <div class="swiper-slide">
+            <div class="logos-slide">
+              <img src="./images/logos/eurocash-gs.png" alt="eurocash" />
+            </div>
+            <div class="logos-slide">
+              <img src="./images/logos/auraton-gs.png" alt="auraton" />
+            </div>
+            <div class="logos-slide">
+              <img src="./images/logos/lars-gs.png" alt="lars" />
+            </div>
+            <div class="logos-slide">
+              <img src="./images/logos/dalpo-gs.png" alt="dalpo" />
+            </div>
+            <div class="logos-slide">
+              <img src="./images/logos/labo-gs.png" alt="labo" />
+            </div>
+            <div class="logos-slide">
               <img src="./images/logos/eurocash-gs.png" alt="eurocash" />
             </div>
           </div>
@@ -528,7 +555,7 @@
             </div>
             <div
               class="footer--right"
-              style="background-image: url(./public/images/mapa.jpg)"
+              style="background-image: url(/images/mapa.jpg)"
             >
               <a
                 target="_blank"
@@ -559,6 +586,45 @@
       $(function () {
         $("#menu").slicknav({
           label: "",
+        });
+      });
+
+      window.addEventListener("DOMContentLoaded", function () {
+        $(".logos-slicks-slide-inner").slick({
+          slidesToShow: 5,
+          slidesToScroll: 1,
+          autoplay: true,
+          autoplaySpeed: 1500,
+          draggable: false,
+          pauseOnFocus: false,
+          pauseOnHover: false,
+          responsive: [
+            {
+              breakpoint: 1024,
+              settings: {
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                infinite: true,
+              },
+            },
+            {
+              breakpoint: 600,
+              settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2,
+              },
+            },
+            {
+              breakpoint: 480,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+              },
+            },
+            // You can unslick at a given breakpoint now by adding:
+            // settings: "unslick"
+            // instead of a settings object
+          ],
         });
       });
     </script>
