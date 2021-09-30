@@ -11,7 +11,10 @@
   }
 
   .offer--item-img__hover {
-    @apply hidden transition-all;
+    @apply hidden transform scale-100;
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 4s;
   }
 
   &--item {
@@ -22,7 +25,7 @@
     }
 
     &-content {
-      @apply lg:absolute text-center  font-book text-lg cursor-default flex flex-col items-center justify-center w-full h-full left-0 top-0 lg:hidden;
+      @apply lg:absolute text-center  font-book text-lg cursor-default flex flex-col items-center justify-center w-full h-full left-0 top-0 lg:hidden transform;
       //   @apply lg:hidden;
       color: #717171;
 
@@ -31,52 +34,60 @@
 
     &:hover {
       .offer--item-content {
-        @apply lg:flex;
+        @apply lg:flex transform;
+        transition-property: all;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        transition-duration: 4s;
       }
 
       .offer--item-img {
-        @apply lg:hidden;
+        @apply lg:hidden transform;
+        transition-property: all;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        transition-duration: 4s;
       }
 
       .offer--item-img__hover {
-        @apply lg:flex lg:opacity-20 transform lg:scale-110 transition-all;
+        @apply lg:flex lg:opacity-20 transform lg:scale-110;
+        transition-property: all;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        transition-duration: 4s;
       }
     }
 
     &-1 {
-      .offer--item-img,
-      .offer--item-img__hover {
+      .offer--item-content {
+        @apply -mt-5;
       }
     }
 
     &-2 {
-      .offer--item-img,
-      .offer--item-img__hover {
-        @apply relative lg:top-4;
+      .offer--item-content {
+        @apply -mt-5;
       }
     }
 
     &-3 {
-      .offer--item-img,
-      .offer--item-img__hover {
+      .offer--item-content {
+        @apply -mt-5;
       }
     }
 
     &-4 {
-      .offer--item-img,
-      .offer--item-img__hover {
+      .offer--item-content {
+        @apply -mt-5;
       }
     }
 
     &-5 {
-      .offer--item-img,
-      .offer--item-img__hover {
+      .offer--item-content {
+        @apply -mt-7;
       }
     }
 
     &-6 {
-      .offer--item-img,
-      .offer--item-img__hover {
+      .offer--item-content {
+        @apply -mt-5;
       }
     }
   }
