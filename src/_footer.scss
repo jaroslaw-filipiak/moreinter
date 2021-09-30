@@ -1,13 +1,13 @@
 .footer {
-  @apply bg-black pl-7 pr-7;
+  @apply bg-black;
 
   &--inner {
-    @include innerContainer;
-    @apply flex flex-col xl:flex-row items-stretch justify-between text-white;
+    // @include innerContainer;
+    @apply flex flex-col lg:flex-row items-stretch justify-between text-white;
   }
 
   &--left {
-    @apply xl:w-4/12 pt-14 pb-14 pl-7 xl:pl-0;
+    @apply lg:w-5/12 pt-14 pb-14 lg:pl-7 xl:pl-0 flex items-center xl:items-end justify-center flex-col xl:pr-48;
 
     .email,
     .phone,
@@ -21,11 +21,15 @@
   }
 
   &--right {
-    @apply xl:w-8/12 relative xl:min-h-full h-96 xl:h-auto;
+    @apply lg:w-7/12 h-96 lg:h-auto  xl:min-h-full  bg-cover bg-no-repeat transform hover:opacity-90 relative;
+
+    a {
+      @apply block  absolute left-0 top-0 w-full h-full;
+    }
   }
 
   .some {
-    @apply flex items-center justify-start mt-16 ml-12;
+    @apply flex items-center justify-start mt-16 xl:ml-12 w-80;
   }
 }
 

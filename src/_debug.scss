@@ -1,7 +1,8 @@
 body {
   &::after {
     content: "xs";
-    @apply block fixed bottom-0 left-0 w-screen p-2 bg-black text-white font-bold z-20;
+    @apply block fixed bottom-0 left-0 w-screen p-2 text-white font-bold z-20;
+    background-color: rgb(35, 198, 219);
   }
 }
 

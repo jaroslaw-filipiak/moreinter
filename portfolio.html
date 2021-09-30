@@ -411,24 +411,27 @@
         <div class="footer">
           <div class="footer--inner">
             <div class="footer--left">
-              <h4 class="uppercase text-xl font-book text-left mb-14">
-                More interactive
-              </h4>
-              <div class="email">
-                <img src="/svg/email-icon.svg" alt="" />
-                <p>biuro@moreinteractive.pl</p>
+              <div class="w-80">
+                <h4 class="uppercase text-xl font-book text-left mb-14">
+                  More interactive
+                </h4>
+                <div class="email">
+                  <img src="/svg/email-icon.svg" alt="" />
+                  <p>biuro@moreinteractive.pl</p>
+                </div>
+                <div class="phone">
+                  <img src="/svg/phone-icon.svg" alt="" />
+                  <p>+48 730 797 111</p>
+                </div>
+                <div class="address">
+                  <img src="/svg/home-icon.svg" alt="" />
+                  <p>
+                    ul. Nowowiejskiego 39 <br />
+                    61-733 poznań <br />NIP: 783 181 92 61
+                  </p>
+                </div>
               </div>
-              <div class="phone">
-                <img src="/svg/phone-icon.svg" alt="" />
-                <p>+48 730 797 111</p>
-              </div>
-              <div class="address">
-                <img src="/svg/home-icon.svg" alt="" />
-                <p>
-                  ul. Nowowiejskiego 39 <br />
-                  61-733 poznań <br />NIP: 783 181 92 61
-                </p>
-              </div>
+
               <div class="some">
                 <div class="fb">
                   <a
@@ -448,8 +451,14 @@
                 </div>
               </div>
             </div>
-            <div class="footer--right">
-              <div id="map"></div>
+            <div
+              class="footer--right"
+              style="background-image: url(./public/images/mapa.jpg)"
+            >
+              <a
+                target="_blank"
+                href="https://consent.google.pl/m?continue=https://www.google.pl/maps/place/MORE%2BInteractive/@52.4123442,16.9218412,18.17z/data%3D!4m5!3m4!1s0x0:0xace33adc75fc017a!8m2!3d52.4122604!4d16.9226741&gl=PL&m=0&pc=m&hl=pl&src=1"
+              ></a>
             </div>
           </div>
         </div>
@@ -477,17 +486,19 @@
       $(".portfolio-row-1").slick({
         // infinite: true,
         // speed: 34000,
+        centerMode: true,
+        centerPadding: "60px",
         slidesToShow: 4,
         autoplay: {
           // delay: 1600,
-          pauseOnMouseEnter: true,
+          pauseOnMouseEnter: false,
           autoplaySpeed: 1600,
           waitForTransition: false,
         },
         autoplay: true,
         // autoplaySpeed: 1600,
         cssEase: "ease-in-out",
-        draggable: true,
+        draggable: false,
         grabCursor: true,
         responsive: [
           {

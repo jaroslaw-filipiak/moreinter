@@ -80,35 +80,6 @@ if (document.querySelector(".mySwiper")) {
   });
 }
 
-if (document.querySelector("#map")) {
-  const map = () => {
-    var createMap = {
-        center: new google.maps.LatLng(52.41232, 16.92279),
-        zoom: 16,
-        panControl: false,
-        zoomControl: false,
-        mapTypeControl: false,
-        scaleControl: false,
-        scrollwheel: false,
-        streetViewControl: true,
-        mapTypeId: google.maps.MapTypeId.ROADMAP,
-      },
-      mapContainer = new google.maps.Map(
-        document.getElementById("map"),
-        createMap
-      ),
-      customIcon = "/images/pin.png",
-      customPosition = new google.maps.LatLng(52.41232, 16.92279),
-      drawOutput = new google.maps.Marker({
-        position: customPosition,
-        map: mapContainer,
-        icon: customIcon,
-      });
-  };
-
-  map();
-}
-
 if (document.querySelector("#chooseFile")) {
   $("#chooseFile").bind("change", function () {
     var filename = $("#chooseFile").val();
