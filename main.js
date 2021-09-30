@@ -4,6 +4,8 @@ import lottie from "lottie-web";
 import tippy from "tippy.js";
 import "tippy.js/dist/tippy.css";
 
+import AOS from "aos";
+
 if (document.querySelector("#template")) {
   const template = document.getElementById("template");
 
@@ -31,6 +33,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import Rellax from "rellax";
+import Aos from "aos";
 Swiper.use([Navigation, Pagination]);
 
 if (document.querySelector(".mySwiper")) {
@@ -66,6 +69,8 @@ if (document.querySelector("#chooseFile")) {
 }
 
 window.addEventListener("DOMContentLoaded", () => {
+  AOS.init();
+
   setTimeout(() => {
     $(".preloader").fadeOut("1000");
   }, 1500);
