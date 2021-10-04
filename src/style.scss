@@ -85,7 +85,7 @@ html {
 }
 
 .slicknav_menu {
-  @apply block md:hidden bg-white;
+  @apply block lg:hidden bg-white;
 }
 
 .slicknav_btn {
@@ -99,7 +99,7 @@ html {
 }
 
 .top-bar {
-  @apply hidden md:flex;
+  @apply hidden lg:flex;
 }
 
 .preloader {

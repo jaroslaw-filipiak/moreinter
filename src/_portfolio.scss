@@ -1,13 +1,35 @@
 .portfolio-hero {
-  height: calc(100vh - 130px);
-  @apply relative xl:mt-36;
+  // height: 88vh;
+  @apply relative xl:mt-36 overflow-hidden;
+
 
   &--inner {
-    @apply flex flex-col xl:flex-row items-center justify-center h-full;
+    @apply flex flex-col lg:flex-row items-center justify-center h-full;
   }
 
   &-left {
-    @apply bg-main-blue w-full h-full xl:w-7/12 flex items-center justify-center;
+    @apply  w-full h-full border flex items-center justify-center ;
+    
+      height: 50vh;
+
+    @media (min-width: 640px) {
+      width: 640px;
+      height: 640px;
+  }
+
+    @media (min-width: 1024px) {
+      width: 500px;
+      height: 500px;
+  }
+  
+    @media (min-width: 1280px) {
+      width: 700px;
+      height: 700px;
+  }
+  @media (min-width: 1536px) {
+    width: 800px;
+      height: 800px;
+}
 
     .swiper-slide {
       @apply flex items-center justify-center h-full bg-cover bg-no-repeat;
@@ -15,7 +37,7 @@
   }
 
   &-right {
-    @apply h-full w-full xl:w-5/12 flex flex-col items-start justify-center text-left pl-11 pr-11 pt-4 xl:pt-0;
+    @apply h-full w-full xl:w-6/12 flex flex-col items-start justify-center text-left pl-11 pr-11 pt-4 xl:pt-0;
 
     .portfolio-right-excerpt {
       @apply mt-16;
@@ -98,4 +120,8 @@
 
 .portfolio-shadow {
   box-shadow: 3px 30px 24px 6px #ababab;
+}
+
+.portfolio-hero-wrapper {
+  @apply border bg-main-blue h-full w-full;
 }
