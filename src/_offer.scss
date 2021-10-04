@@ -1,15 +1,19 @@
 .item--content-area {
-  @apply w-full relative;
-  height: 226px;
+  @apply w-full lg:relative ;
+
+  @media (min-width: 1024px) {
+    height: 226px;
+}
+ 
   @include globalTransition;
 
   .offer--item-img , .offer--item-img__hover {
-    @apply absolute left-0 top-0;
+    @apply  lg:absolute left-0 top-0;
     @include globalTransition;
   }
 
   .offer--item-img__hover {
-    @apply opacity-0;
+    @apply hidden lg:flex opacity-0;
     @include globalTransition;
   }
 }
@@ -31,23 +35,29 @@
   &--item {
     @apply w-full md:w-6/12 lg:w-60 flex flex-col items-center justify-center md:pl-7 md:pr-7 lg:pl-0 lg:pr-0 lg:ml-9 lg:mr-9 ;
     @include globalTransition;
-    height: 350px;
 
-    &:hover {
+    @media (min-width: 1024px) {
+      height: 350px;
+    }
 
-      .offer--item-img {
-      @apply opacity-0;
-      @include globalTransition;
-      }
-      .offer--item-img__hover {
-        @apply opacity-30;
+    @media (min-width: 1024px) {
+      &:hover {
+
+        .offer--item-img {
+        @apply opacity-0;
         @include globalTransition;
-      } 
-      .offer--item-content {
-        @apply opacity-100;
-        @include globalTransition;
+        }
+        .offer--item-img__hover {
+          @apply opacity-30;
+          @include globalTransition;
+        } 
+        .offer--item-content {
+          @apply opacity-100;
+          @include globalTransition;
+        }
       }
     }
+    
 
     p {
       @apply uppercase font-medium text-xl text-black text-center;
@@ -55,7 +65,7 @@
     }
 
     &-content {
-      @apply  text-center  font-book text-lg cursor-default flex flex-col items-center justify-center w-full h-full absolute left-0 top-0 transform opacity-0;
+      @apply  text-center  font-book text-lg cursor-default flex flex-col items-center justify-center w-full lg:h-full lg:absolute lg:left-0 lg:top-0 transform lg:opacity-0;
     
       color: #717171;
         @include globalTransition;
@@ -65,9 +75,54 @@
     &-1 {
 
       .offer--item-content {
-        p {
-          @apply border relative top-9;
-        }
+         
+          @apply  lg:relative top-3;
+        
+      }
+    }
+
+    &-2 {
+
+      .offer--item-content {
+         
+          @apply  lg:relative top-3;
+        
+      }
+    }
+
+    &-3 {
+
+      .offer--item-content {
+         
+          @apply  lg:relative top-3;
+        
+      }
+    }
+
+    &-4 {
+
+      .offer--item-content {
+         
+          @apply  lg:relative top-3;
+        
+      }
+    }
+
+    &-5 {
+
+      .offer--item-content {
+         
+          @apply  lg:relative top-3;
+        
+      }
+    }
+
+    &-6 {
+
+      .offer--item-content {
+         
+          @apply  lg:relative top-3;
+        
       }
     }
 
