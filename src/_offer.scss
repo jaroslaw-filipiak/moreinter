@@ -1,3 +1,19 @@
+.item--content-area {
+  @apply w-full relative;
+  height: 226px;
+  @include globalTransition;
+
+  .offer--item-img , .offer--item-img__hover {
+    @apply absolute left-0 top-0;
+    @include globalTransition;
+  }
+
+  .offer--item-img__hover {
+    @apply opacity-0;
+    @include globalTransition;
+  }
+}
+
 .offer {
   @apply bg-gray-f8 mx-auto;
 
@@ -10,14 +26,28 @@
     @apply flex items-stretch justify-center flex-wrap mx-auto w-full lg:w-4/5 mt-14 pb-20;
   }
 
-  .offer--item-img__hover {
-    @apply hidden transform scale-100;
-    @include globalTransition;
-  }
+  
 
   &--item {
-    @apply w-full md:w-6/12 lg:w-60 flex flex-col items-center justify-center md:pl-7 md:pr-7 lg:pl-0 lg:pr-0 lg:ml-9 lg:mr-9 relative;
+    @apply w-full md:w-6/12 lg:w-60 flex flex-col items-center justify-center md:pl-7 md:pr-7 lg:pl-0 lg:pr-0 lg:ml-9 lg:mr-9 ;
     @include globalTransition;
+    height: 350px;
+
+    &:hover {
+
+      .offer--item-img {
+      @apply opacity-0;
+      @include globalTransition;
+      }
+      .offer--item-img__hover {
+        @apply opacity-30;
+        @include globalTransition;
+      } 
+      .offer--item-content {
+        @apply opacity-100;
+        @include globalTransition;
+      }
+    }
 
     p {
       @apply uppercase font-medium text-xl text-black text-center;
@@ -25,70 +55,24 @@
     }
 
     &-content {
-      @apply lg:absolute text-center  font-book text-lg cursor-default flex flex-col items-center justify-center w-full h-full left-0 top-0 lg:hidden transform;
-      //   @apply lg:hidden;
+      @apply  text-center  font-book text-lg cursor-default flex flex-col items-center justify-center w-full h-full absolute left-0 top-0 transform opacity-0;
+    
       color: #717171;
         @include globalTransition;
 
-      //   min-height: 164px;
-    }
-
-    .offer--item-img__hover {
-      @apply transform lg:scale-100;
-      @include globalTransition;
-    }
-
-    &:hover {
-      .offer--item-content {
-        @apply lg:flex transform;
-        @include globalTransition;
-      }
-
-      .offer--item-img {
-        @apply lg:hidden transform;
-        @include globalTransition;
-      }
-
-      .offer--item-img__hover {
-        @apply lg:flex lg:opacity-20 transform lg:scale-110;
-        @include globalTransition;
-      }
     }
 
     &-1 {
+
       .offer--item-content {
-        @apply -mt-5;
+        p {
+          @apply border relative top-9;
+        }
       }
     }
 
-    &-2 {
-      .offer--item-content {
-        @apply -mt-5;
-      }
-    }
+   
 
-    &-3 {
-      .offer--item-content {
-        @apply -mt-5;
-      }
-    }
-
-    &-4 {
-      .offer--item-content {
-        @apply -mt-5;
-      }
-    }
-
-    &-5 {
-      .offer--item-content {
-        @apply -mt-7;
-      }
-    }
-
-    &-6 {
-      .offer--item-content {
-        @apply -mt-5;
-      }
-    }
+   
   }
 }
