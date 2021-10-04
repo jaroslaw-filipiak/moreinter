@@ -12,46 +12,46 @@
 
   .offer--item-img__hover {
     @apply hidden transform scale-100;
-    transition-property: all;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    transition-duration: 4s;
+    @include globalTransition;
   }
 
   &--item {
     @apply w-full md:w-6/12 lg:w-60 flex flex-col items-center justify-center md:pl-7 md:pr-7 lg:pl-0 lg:pr-0 lg:ml-9 lg:mr-9 relative;
+    @include globalTransition;
 
     p {
       @apply uppercase font-medium text-xl text-black text-center;
+      @include globalTransition;
     }
 
     &-content {
       @apply lg:absolute text-center  font-book text-lg cursor-default flex flex-col items-center justify-center w-full h-full left-0 top-0 lg:hidden transform;
       //   @apply lg:hidden;
       color: #717171;
+        @include globalTransition;
 
       //   min-height: 164px;
+    }
+
+    .offer--item-img__hover {
+      @apply transform lg:scale-100;
+      @include globalTransition;
     }
 
     &:hover {
       .offer--item-content {
         @apply lg:flex transform;
-        transition-property: all;
-        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-        transition-duration: 4s;
+        @include globalTransition;
       }
 
       .offer--item-img {
         @apply lg:hidden transform;
-        transition-property: all;
-        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-        transition-duration: 4s;
+        @include globalTransition;
       }
 
       .offer--item-img__hover {
         @apply lg:flex lg:opacity-20 transform lg:scale-110;
-        transition-property: all;
-        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-        transition-duration: 4s;
+        @include globalTransition;
       }
     }
 

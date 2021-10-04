@@ -7,7 +7,8 @@ html {
 }
 
 @mixin globalTransition {
-  transition: all 0.3s ease-in-out;
+  // transition: all 0.3s ease-in-out;
+  transition: all 0.3s cubic-bezier(0.39, 0.575, 0.565, 1);
 }
 
 @mixin innerContainer {
@@ -63,10 +64,11 @@ html {
   ul.main-nav {
     @apply flex font-book;
     li {
-      @apply mr-12;
+      @apply mr-12 ;
 
       a {
-        @apply text-main-blue uppercase text-tiny;
+        @apply text-main-blue uppercase text-tiny hover:text-main-orange;
+        @include globalTransition;
       }
     }
   }
