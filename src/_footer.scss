@@ -46,3 +46,10 @@
     }
   }
 }
+
+
+.footer-icon-wrapper  {
+  @apply  w-7 h-7 flex items-center justify-start mr-4 ;
+  position: relative;
+  top: -2px;
+}
