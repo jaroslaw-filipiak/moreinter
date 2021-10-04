@@ -35,7 +35,7 @@
 }
 
 .copy {
-  @apply bg-gray-7070 text-white flex items-center justify-around font-book text-xs uppercase pt-2 pb-2;
+  @apply bg-gray-7070 text-white flex flex-col lg:flex-row items-center justify-around font-book text-xs uppercase pt-2 pb-2;
 
   div {
     @apply flex items-center justify-start;
