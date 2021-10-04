@@ -19,16 +19,18 @@
 
   .img-hover {
     @apply hover:opacity-0;
-    transition: all 0.3s cubic-bezier(0.39, 0.575, 0.565, 1);
+    @include globalTransition;
   }
 
   .img-left {
     @apply lg:transform lg:scale-75 2xl:scale-100 -left-72 top-0;
     transform-origin: left top;
+    @include globalTransition;
   }
 
   .img-right {
     @apply hidden lg:block lg:transform lg:scale-75 2xl:scale-100 right-0 top-0;
     transform-origin: right top;
+    @include globalTransition;
   }
 }

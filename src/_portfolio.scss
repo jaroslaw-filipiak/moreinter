@@ -22,6 +22,7 @@
 
       a {
         @apply inline-block mt-20 hover:text-main-blue;
+        @include globalTransition;
       }
     }
   }
@@ -50,15 +51,18 @@
 .portfolio-thumb-item {
   @apply h-80 bg-cover bg-gray-7070 hover:opacity-80 p-8;
   border: 1px solid white;
+  @include globalTransition;
 
   &:hover {
     .portfolio-thumb-item--content {
-      @apply block;
+      @apply opacity-100;
+      @include globalTransition;
     }
   }
 
   &--content {
-    @apply text-white text-left relative w-full h-full lg:hidden;
+    @apply text-white text-left relative w-full h-full opacity-0;
+    @include globalTransition;
 
     a {
       @apply block w-full h-full left-0 top-0 border-main-blue z-20 absolute;
@@ -79,6 +83,7 @@
 
   a {
     @apply text-xl uppercase text-white w-64 pl-11 pr-11 flex items-center justify-center border-2 text-center pt-2 pb-2 bg-main-blue hover:bg-main-orange;
+    @include globalTransition;
 
     &:hover {
       @apply text-white;

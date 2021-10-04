@@ -44,6 +44,7 @@
 
   .btn-submit {
     @apply text-3xl text-white bg-main-blue font-book uppercase font-semibold border-4  pl-16 pr-16 pt-4 pb-4 hover:bg-main-orange;
+    @include globalTransition;
   }
 }
 .checkbox-acceptance {

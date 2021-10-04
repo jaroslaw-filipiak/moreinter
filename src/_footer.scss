@@ -22,6 +22,7 @@
 
   &--right {
     @apply lg:w-7/12 h-96 lg:h-auto  xl:min-h-full  bg-cover bg-no-repeat transform hover:opacity-90 relative;
+    @include globalTransition;
 
     a {
       @apply block  absolute left-0 top-0 w-full h-full;
@@ -41,6 +42,7 @@
 
     a {
       @apply hover:opacity-80;
+      @include globalTransition;
     }
   }
 }
