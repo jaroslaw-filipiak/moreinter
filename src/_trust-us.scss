@@ -29,12 +29,23 @@
   }
 }
 
-// .logos-slide {
-//   @apply border;
-//   width: 270px !important;
-// }
+.logos {
+  .slick-track {
+    @apply flex items-center justify-center;
+  }
+}
+
+.logos-slide {
+  @include globalTransition();
+  &:hover {
+    filter: grayscale(1);
+    @include globalTransition();
+  }
+  // width: 270px !important;
+}
 
 .logos-slicks-slide-inner {
+  @apply flex items-center justify-center;
   .slick-slide {
     @apply pl-10 pr-10;
   }
