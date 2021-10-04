@@ -24,11 +24,12 @@
 .line {
   @apply h-1 mb-1 absolute;
   // background: rgb(232, 125, 0);
+  
 
   background: linear-gradient(
     90deg,
-    rgba(73, 126, 192, 1) 0%,
-    rgba(73, 126, 192, 1) 100%
+    rgba(232, 125, 0, 1) 0%,
+    rgba(232, 125, 0, 1) 100%
   );
 }
 

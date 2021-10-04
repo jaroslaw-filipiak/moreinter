@@ -104,11 +104,20 @@ window.addEventListener("DOMContentLoaded", () => {
       var linesTl = gsap.timeline();
 
       linesTl.from($(container), {
+        // backgroundImage: "linear-gradient( 90deg, #E87D00 0%, #E87D00 100%)",
         opacity: 1,
-        backgroundImage: "linear-gradient( 90deg, #e87d00 0%, #e87d00 100%)",
         width: "0",
         ease: "ease-in",
+        onComplete: gradientAnim
       });
+
+      function gradientAnim() {
+        linesTl.to($(container), {
+          backgroundImage: "linear-gradient( 90deg, #497EC0 0%, #497EC0 100%)",
+          ease: "ease-in",
+         
+        });
+      }
 
       new ScrollMagic.Scene({
         triggerElement: this,

@@ -37,8 +37,9 @@
 
 .logos-slide {
   @include globalTransition();
+  filter: grayscale(1);
   &:hover {
-    filter: grayscale(1);
+    filter: grayscale(0);
     @include globalTransition();
   }
   // width: 270px !important;
