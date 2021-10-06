@@ -16,7 +16,7 @@ html {
   margin: 0 auto;
 }
 
-// @import "./debug";
+@import "./debug";
 
 @import "/node_modules/slicknav/dist/slicknav.min.css";
 @import "/node_modules/swiper/swiper-bundle.min.css";
@@ -109,4 +109,9 @@ html {
   img {
     @apply w-52;
   }
+}
+
+#tooltip_acceptance {
+  @apply absolute w-full -top-52 md:-top-28 lg:-top-32 xl:-top-28 bg-black text-white p-3 font-book;
+  
 }

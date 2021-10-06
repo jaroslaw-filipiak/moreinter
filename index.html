@@ -50,6 +50,8 @@
       referrerpolicy="no-referrer"
     ></script>
 
+   
+
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"
@@ -72,9 +74,11 @@
     />
 
     <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/vue"></script>
   </head>
 
   <body>
+   
     <div class="preloader">
       <img src="./images/preloader_logo.gif" alt="logo moreinteractive.pl" />
     </div>
@@ -516,21 +520,22 @@
               <input type="checkbox" id="html" />
               <label for="html"> </label>
             </div>
-            <div class="right-wrap relative">
-              <label
-                class="font-light italic text-gray-7070 opacity-50"
-                for="random"
-              >
+            <div id="sg1" class="relative right-wrap font-light italic text-gray-7070" style="z-index: 210;">
                 W związku ze złożonym zapytaniem oświadczam, że zapoznałam/em
                 się z treścią
-                <span
-                  class="font-semibold cursor-pointer acceptance-tooltip"
-                  href="#"
-                  >klauzuli informacyjnej</span
-                >
+                <span @mouseEnter="showTooltip" @click="toggleVisible" class="font-semibold acceptance-tooltip inline-block overflow-visible cursor-default" >klauzuli informacyjnej</span>
                 dotyczącej przetwarzania moich danych osobowych przez MORE
                 Interactive Sp. z o.o. Sp. K. z siedzibą w Poznaniu.
-              </label>
+                <div id="tooltip_acceptance" v-if="isVisible">
+                  Administratorem Państwa danych osobowych, które zostały
+                  umieszczone w formularzu kontaktowym, jest MORE Interactive Sp. z
+                  o.o. Sp. K. z siedzibą w Poznaniu. Przekazane dane osobowe będą
+                  przetwarzane w celu udzielenia odpowiedzi na Państwa zapytanie.
+                  Informacje o Państwa prawach, podstawie prawnej przetwarzania
+                  danych osobowych oraz okresie ich przechowywania znajdują się
+                  <a class="hover:underline" href="/public/docs/Ochrona_danych_osobowych.pdf">tutaj</a>
+                </div>
+            
             </div>
           </div>
 
@@ -634,7 +639,6 @@
         var swiperLogos = new Swiper(".home-logos-swiper", {
           spaceBetween: 30,
           loop: true,
-          // centeredSlides: true,
           slidesPerView: 5,
           autoplay: {
             delay: 800,
@@ -643,5 +647,28 @@
         });
       });
     </script>
+
+<script>
+  // when life is settled, load up the fun stuff
+  document.addEventListener('DOMContentLoaded', function () {
+    new Vue({
+      el: '#sg1',
+      // define data - initial display text
+      data: {
+        isVisible: false,
+      },
+      methods: {
+        toggleVisible() {
+          this.isVisible = !this.isVisible
+        },
+        showTooltip() {
+          this.isVisible = true;
+        }
+      }
+    })
+  })
+</script>
+   
+     
   </body>
 </html>
