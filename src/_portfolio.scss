@@ -10,7 +10,7 @@
   &-left {
     @apply  w-full h-full border flex items-center justify-center ;
     
-      height: 50vh;
+    height: 50vh;
 
     @media (min-width: 640px) {
       width: 640px;
@@ -37,7 +37,7 @@
   }
 
   &-right {
-    @apply h-full w-full xl:w-6/12 flex flex-col items-start justify-center text-left pl-11 pr-11 pt-4 xl:pt-0;
+    @apply min-h-full w-full xl:w-6/12 flex flex-col items-start justify-center text-left pl-11 pr-11 pt-4 xl:pt-0;
 
     .portfolio-right-excerpt {
       @apply mt-16;
@@ -118,7 +118,12 @@
   }
 }
 
+
+.shadow-inner {
+  @apply relative md:-top-12;
+}
 .portfolio-shadow {
+  
   box-shadow: 3px 30px 24px 6px #ababab;
 }
 

@@ -28,7 +28,7 @@ window.addEventListener("scroll", function () {
   }
 });
 
-import Swiper, { Navigation, Pagination } from "swiper";
+import Swiper, { Navigation, Pagination, Autoplay } from "swiper";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -231,3 +231,5 @@ window.addEventListener("DOMContentLoaded", () => {
 if (document.querySelector(".rellax")) {
   var rellax = new Rellax(".rellax");
 }
+
+
