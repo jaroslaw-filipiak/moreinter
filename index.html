@@ -254,7 +254,7 @@
                 />
                 <p class="lg:hidden">Wideo<br />&nbsp;</p>
                 <div class="offer--item-content">
-                  Stworzymy scenariusz, narysujemy <br />i zrealizujemy film i
+                  Stworzymy scenariusz, narysujemy <br />i zrealizujemy film <br /> i
                   animację
                 </div>
               </div>
@@ -347,7 +347,7 @@
           </div>
           <div class="how-we-work--item">
             <div id="item3"></div>
-            <p>Realizujemy, optymalizujemy i podsumowujemy</p>
+            <p>Realizujemy, optymalizujemy <br> i podsumowujemy</p>
           </div>
         </div>
       </section>
@@ -639,11 +639,32 @@
         var swiperLogos = new Swiper(".home-logos-swiper", {
           spaceBetween: 30,
           loop: true,
-          slidesPerView: 5,
+          slidesPerView: 2,
           autoplay: {
             delay: 800,
             disableOnInteraction: false,
           },
+          breakpoints: {
+    // when window width is >= 320px
+    320: {
+      slidesPerView: 2,
+      spaceBetween: 20
+    },
+    // when window width is >= 480px
+    480: {
+      slidesPerView: 2,
+      spaceBetween: 30
+    },
+    // when window width is >= 640px
+    640: {
+      slidesPerView: 3,
+      spaceBetween: 40
+    },
+    1200: {
+      slidesPerView: 5,
+      spaceBetween: 40
+    }
+  }
         });
       });
     </script>
