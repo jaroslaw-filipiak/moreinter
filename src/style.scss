@@ -112,6 +112,12 @@ html {
 }
 
 #tooltip_acceptance {
-  @apply absolute w-full -top-52 md:-top-28 lg:-top-32 xl:-top-28 bg-black text-white p-3 font-book;
+  @apply absolute w-full -top-52 md:-top-28 lg:-top-32 xl:-top-36  text-white p-3 font-book;
   
+  .tooltip-inner   {
+    @apply bg-black p-5;
+  }
+  // .tooltip-hover-area {
+  //   @apply border border-main-orange h-2 w-full;
+  // }
 }

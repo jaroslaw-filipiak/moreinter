@@ -230,7 +230,7 @@ input.error {
   position: absolute;
   z-index: 9999999999999999;
 }
-#sg1, #tooltip_acceptance {
+#sg1, #tooltip_acceptance , .tooltip-inner {
   &::selection {
     background-color: transparent;
   }

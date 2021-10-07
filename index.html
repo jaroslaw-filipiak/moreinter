@@ -515,25 +515,29 @@
             </div>
           </div>
 
-          <div id="sg1" class="checkbox-acceptance">
+          <div id="sg1" @mouseleave="hideTooltip" class="checkbox-acceptance">
             <div class="form-group">
               <input :checked="checked" type="checkbox" id="html"  />
               <label for="html"> </label>
             </div>
-            <div @click="handleCheck"  class="no-selection cursor-default relative right-wrap font-light italic text-gray-7070" style="z-index: 210;">
+            <div @click="handleCheck"   class="no-selection cursor-default relative right-wrap font-light italic text-gray-7070" style="z-index: 210;">
                 W związku ze złożonym zapytaniem oświadczam, że zapoznałam/em
                 się z treścią
-                <span @mouseEnter="showTooltip" @click="toggleVisible" class="no-selection font-semibold acceptance-tooltip inline-block overflow-visible cursor-default" >klauzuli informacyjnej</span>
+                <span @mouseover="showTooltip"   @click="toggleVisible" class="no-selection font-semibold acceptance-tooltip inline-block overflow-visible cursor-default" >klauzuli informacyjnej</span>
                 dotyczącej przetwarzania moich danych osobowych przez MORE
                 Interactive Sp. z o.o. Sp. K. z siedzibą w Poznaniu.
-                <div id="tooltip_acceptance" v-if="isVisible">
-                  Administratorem Państwa danych osobowych, które zostały
-                  umieszczone w formularzu kontaktowym, jest MORE Interactive Sp. z
-                  o.o. Sp. K. z siedzibą w Poznaniu. Przekazane dane osobowe będą
-                  przetwarzane w celu udzielenia odpowiedzi na Państwa zapytanie.
-                  Informacje o Państwa prawach, podstawie prawnej przetwarzania
-                  danych osobowych oraz okresie ich przechowywania znajdują się
-                  <a class="hover:underline font-bold underline" href="/public/docs/Ochrona_danych_osobowych.pdf">tutaj.</a>
+                
+                <div id="tooltip_acceptance" @mouseleave="hideTooltip"  v-if="isVisible">
+                  <div class="tooltip-inner">
+                    Administratorem Państwa danych osobowych, które zostały
+                    umieszczone w formularzu kontaktowym, jest MORE Interactive Sp. z
+                    o.o. Sp. K. z siedzibą w Poznaniu. Przekazane dane osobowe będą
+                    przetwarzane w celu udzielenia odpowiedzi na Państwa zapytanie.
+                    Informacje o Państwa prawach, podstawie prawnej przetwarzania
+                    danych osobowych oraz okresie ich przechowywania znajdują się
+                    <a class="hover:underline font-bold underline" href="/public/docs/Ochrona_danych_osobowych.pdf">tutaj.</a>
+                  </div>
+                  <div class="tooltip-hover-area"></div>
                 </div>
             
             </div>
@@ -685,6 +689,9 @@
         },
         showTooltip() {
           this.isVisible = true;
+        },
+        hideTooltip() {
+          this.isVisible = false;
         },
         handleCheck() {
           this.checked =  !this.checked
