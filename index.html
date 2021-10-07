@@ -515,15 +515,15 @@
             </div>
           </div>
 
-          <div class="checkbox-acceptance">
+          <div id="sg1" class="checkbox-acceptance">
             <div class="form-group">
-              <input type="checkbox" id="html" />
+              <input :checked="checked" type="checkbox" id="html"  />
               <label for="html"> </label>
             </div>
-            <div id="sg1" class="relative right-wrap font-light italic text-gray-7070" style="z-index: 210;">
+            <div @click="handleCheck"  class="no-selection cursor-default relative right-wrap font-light italic text-gray-7070" style="z-index: 210;">
                 W związku ze złożonym zapytaniem oświadczam, że zapoznałam/em
                 się z treścią
-                <span @mouseEnter="showTooltip" @click="toggleVisible" class="font-semibold acceptance-tooltip inline-block overflow-visible cursor-default" >klauzuli informacyjnej</span>
+                <span @mouseEnter="showTooltip" @click="toggleVisible" class="no-selection font-semibold acceptance-tooltip inline-block overflow-visible cursor-default" >klauzuli informacyjnej</span>
                 dotyczącej przetwarzania moich danych osobowych przez MORE
                 Interactive Sp. z o.o. Sp. K. z siedzibą w Poznaniu.
                 <div id="tooltip_acceptance" v-if="isVisible">
@@ -533,7 +533,7 @@
                   przetwarzane w celu udzielenia odpowiedzi na Państwa zapytanie.
                   Informacje o Państwa prawach, podstawie prawnej przetwarzania
                   danych osobowych oraz okresie ich przechowywania znajdują się
-                  <a class="hover:underline" href="/public/docs/Ochrona_danych_osobowych.pdf">tutaj</a>
+                  <a class="hover:underline font-bold underline" href="/public/docs/Ochrona_danych_osobowych.pdf">tutaj.</a>
                 </div>
             
             </div>
@@ -675,13 +675,19 @@
       // define data - initial display text
       data: {
         isVisible: false,
+        checked: false,
       },
       methods: {
         toggleVisible() {
           this.isVisible = !this.isVisible
+          const checkbox = document.querySelector('#html');
+          console.log(checkbox.checked)
         },
         showTooltip() {
           this.isVisible = true;
+        },
+        handleCheck() {
+          this.checked =  !this.checked
         }
       }
     })

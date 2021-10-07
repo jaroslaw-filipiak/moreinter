@@ -55,6 +55,10 @@
   @apply flex items-center justify-start mt-8;
 
   max-width: 800px;
+
+  &::selection {
+    background-color: transparent;
+  }
 }
 .left-wrap {
   width: 50px;
@@ -225,4 +229,15 @@ input.error {
 #template {
   position: absolute;
   z-index: 9999999999999999;
+}
+#sg1, #tooltip_acceptance {
+  &::selection {
+    background-color: transparent;
+  }
+}
+
+.no-selection {
+  &::selection {
+    background-color: transparent;
+  }
 }
